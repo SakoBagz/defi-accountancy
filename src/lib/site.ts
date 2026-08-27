@@ -5,8 +5,8 @@ export const siteConfig = {
   description:
     "Personal and business tax preparation, bookkeeping, sales tax, business formation, licensing, and year-round accounting support.",
   url: process.env.NEXT_PUBLIC_SITE_URL ?? "https://www.thedefiaccountancy.com",
-  phone: "(323) 544-3334",
-  phoneHref: "tel:+13235443334",
+  phone: "(424) 292-2000",
+  phoneHref: "tel:+14242922000",
   email: "raz@thedefiaccountancy.com",
   emailHref: "mailto:raz@thedefiaccountancy.com",
   hours: [
