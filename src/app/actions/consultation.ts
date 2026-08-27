@@ -1,6 +1,7 @@
 "use server";
 
 import { z } from "zod";
+import { sendConsultationNotification } from "@/lib/consultation-notify";
 import { createSupabaseClient } from "@/lib/supabase";
 
 const consultationSchema = z.object({
@@ -106,6 +107,22 @@ export async function submitConsultation(
         message:
           "We could not submit your request right now. Please call or email us directly.",
       };
+    }
+
+    const notifyResult = await sendConsultationNotification({
+      fullName: data.fullName,
+      email: data.email,
+      phone: data.phone,
+      service: data.service,
+      message: data.message,
+      preferredContact: data.preferredContact || null,
+      businessName: data.businessName || null,
+      intent: data.intent || null,
+      sourcePath: data.sourcePath || null,
+    });
+
+    if (!notifyResult.ok) {
+      console.error("consultation notify failed after save", notifyResult.error);
     }
 
     return {
