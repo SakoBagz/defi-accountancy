@@ -19,7 +19,7 @@ export const siteConfig = {
   clientPortalUrl: null as string | null,
   trustLine:
     "Trusted by individuals and businesses for reliable tax and accounting services.",
-  clientCountNote: "Serving 80+ tax clients and growing.",
+  clientCountNote: "Serving thousands of tax clients and growing.",
 } as const;
 
 export type ServiceSlug =
