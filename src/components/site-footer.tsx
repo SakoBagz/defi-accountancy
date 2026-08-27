@@ -1,0 +1,155 @@
+import Image from "next/image";
+import Link from "next/link";
+import { services } from "@/lib/services";
+import { siteConfig } from "@/lib/site";
+
+export function SiteFooter() {
+  const year = new Date().getFullYear();
+
+  return (
+    <footer className="border-t border-border bg-primary text-primary-foreground">
+      <div className="mx-auto grid max-w-6xl gap-10 px-4 py-14 sm:px-6 md:grid-cols-2 lg:grid-cols-4 lg:px-8">
+        <div className="space-y-4">
+          <div className="flex items-center gap-3">
+            <Image
+              src="/logo.png"
+              alt=""
+              width={36}
+              height={36}
+              className="size-9 rounded-md bg-primary-foreground/10 object-contain p-0.5"
+            />
+            <div>
+              <p className="font-heading text-lg font-semibold">
+                {siteConfig.name}
+              </p>
+              <p className="text-sm text-primary-foreground/75">
+                {siteConfig.descriptor}
+              </p>
+            </div>
+          </div>
+          <p className="max-w-xs text-sm leading-relaxed text-primary-foreground/75">
+            Full-service tax, accounting, bookkeeping, and business services for
+            individuals and business owners.
+          </p>
+        </div>
+
+        <div>
+          <p className="mb-3 text-sm font-semibold uppercase tracking-wide text-primary-foreground/60">
+            Services
+          </p>
+          <ul className="space-y-2 text-sm">
+            {services.map((service) => (
+              <li key={service.slug}>
+                <Link
+                  href={service.href}
+                  className="text-primary-foreground/85 transition-colors duration-200 ease-out-strong hover:text-primary-foreground"
+                >
+                  {service.shortName}
+                </Link>
+              </li>
+            ))}
+          </ul>
+        </div>
+
+        <div>
+          <p className="mb-3 text-sm font-semibold uppercase tracking-wide text-primary-foreground/60">
+            Company
+          </p>
+          <ul className="space-y-2 text-sm">
+            <li>
+              <Link
+                href="/about"
+                className="text-primary-foreground/85 transition-colors duration-200 ease-out-strong hover:text-primary-foreground"
+              >
+                About
+              </Link>
+            </li>
+            <li>
+              <Link
+                href="/faq"
+                className="text-primary-foreground/85 transition-colors duration-200 ease-out-strong hover:text-primary-foreground"
+              >
+                FAQ
+              </Link>
+            </li>
+            <li>
+              <Link
+                href="/contact"
+                className="text-primary-foreground/85 transition-colors duration-200 ease-out-strong hover:text-primary-foreground"
+              >
+                Contact
+              </Link>
+            </li>
+            {siteConfig.clientPortalUrl ? (
+              <li>
+                <a
+                  href={siteConfig.clientPortalUrl}
+                  className="text-primary-foreground/85 transition-colors duration-200 ease-out-strong hover:text-primary-foreground"
+                >
+                  Client Portal
+                </a>
+              </li>
+            ) : null}
+          </ul>
+        </div>
+
+        <div>
+          <p className="mb-3 text-sm font-semibold uppercase tracking-wide text-primary-foreground/60">
+            Contact
+          </p>
+          <ul className="space-y-2 text-sm text-primary-foreground/85">
+            <li>
+              <a
+                href={siteConfig.phoneHref}
+                className="transition-colors duration-200 ease-out-strong hover:text-primary-foreground"
+              >
+                {siteConfig.phone}
+              </a>
+            </li>
+            <li>
+              <a
+                href={siteConfig.emailHref}
+                className="transition-colors duration-200 ease-out-strong hover:text-primary-foreground"
+              >
+                {siteConfig.email}
+              </a>
+            </li>
+            {siteConfig.hours.map((slot) => (
+              <li key={slot.days}>
+                <span className="block text-primary-foreground/60">
+                  {slot.days}
+                </span>
+                {slot.time}
+              </li>
+            ))}
+            {siteConfig.serviceArea ? (
+              <li>Serving {siteConfig.serviceArea}</li>
+            ) : null}
+          </ul>
+        </div>
+      </div>
+
+      <div className="border-t border-primary-foreground/10">
+        <div className="mx-auto flex max-w-6xl flex-col gap-3 px-4 py-6 text-sm text-primary-foreground/65 sm:flex-row sm:items-center sm:justify-between sm:px-6 lg:px-8">
+          <p>
+            © {year} {siteConfig.name}. All rights reserved.
+          </p>
+          <div className="flex gap-4">
+            <Link
+              href="/privacy"
+              className="transition-colors duration-200 ease-out-strong hover:text-primary-foreground"
+            >
+              Privacy Policy
+            </Link>
+            <Link
+              href="/terms"
+              className="transition-colors duration-200 ease-out-strong hover:text-primary-foreground"
+            >
+              Terms / Disclaimer
+            </Link>
+          </div>
+        </div>
+      </div>
+    </footer>
+  );
+}
