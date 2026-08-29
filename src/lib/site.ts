@@ -16,7 +16,7 @@ export const siteConfig = {
   /** Set when a geographic service area is confirmed. */
   serviceArea: null as string | null,
   /** Set when a secure client portal URL is available. */
-  clientPortalUrl: null as string | null,
+  clientPortalUrl: "https://defi.mytaxportal.online",
   trustLine:
     "Trusted by individuals and businesses for reliable tax and accounting services.",
   clientCountNote: "Serving thousands of tax clients and growing.",
