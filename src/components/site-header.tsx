@@ -35,11 +35,11 @@ export function SiteHeader() {
           aria-label={`${siteConfig.name} home`}
         >
           <Image
-            src="/logo.png"
+            src="/logo-icon.png"
             alt=""
-            width={40}
-            height={40}
-            className="size-10 rounded-md object-contain"
+            width={48}
+            height={48}
+            className="size-12 rounded-md object-contain"
             priority
           />
           <span className="min-w-0">
