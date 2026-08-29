@@ -3,12 +3,17 @@
 import Image from "next/image";
 import Link from "next/link";
 import { useState } from "react";
-import { ChevronDown, LockKeyhole, Menu, Phone, X } from "lucide-react";
+import { ChevronDown, Info, LockKeyhole, Menu, Phone, X } from "lucide-react";
 import { ClientPortalLink } from "@/components/client-portal-link";
 import { buttonVariants } from "@/components/ui/button";
 import { services } from "@/lib/services";
 import { siteConfig } from "@/lib/site";
 import { cn } from "@/lib/utils";
+
+const clientPortalInfoUrl = new URL(
+  "/client-portal",
+  siteConfig.url
+).toString();
 
 const navLinks = [
   { href: "/", label: "Home" },
@@ -123,16 +128,29 @@ export function SiteHeader() {
           >
             <Phone className="size-4" />
           </a>
-          <ClientPortalLink
-            source="header"
-            className={cn(
-              buttonVariants({ variant: "outline", size: "sm" }),
-              "hidden md:inline-flex"
-            )}
-          >
-            <LockKeyhole aria-hidden />
-            Client Portal
-          </ClientPortalLink>
+          <div className="hidden items-center gap-0 md:flex">
+            <ClientPortalLink
+              source="header"
+              className={cn(
+                buttonVariants({ variant: "outline", size: "sm" }),
+                "rounded-r-none border-r-0"
+              )}
+            >
+              <LockKeyhole aria-hidden />
+              Client Portal
+            </ClientPortalLink>
+            <Link
+              href={clientPortalInfoUrl}
+              aria-label="Learn about the Client Portal"
+              title="Learn about the Client Portal"
+              className={cn(
+                buttonVariants({ variant: "outline", size: "icon-sm" }),
+                "rounded-l-none"
+              )}
+            >
+              <Info aria-hidden />
+            </Link>
+          </div>
           <Link
             href="/contact"
             className={cn(
@@ -198,14 +216,31 @@ export function SiteHeader() {
               </Link>
             ))}
             <div className="mt-6 flex flex-col gap-2 px-1">
-              <ClientPortalLink
-                source="mobile_menu"
-                onClick={() => setMobileOpen(false)}
-                className={buttonVariants({ variant: "outline", size: "lg" })}
-              >
-                <LockKeyhole aria-hidden />
-                Client Portal
-              </ClientPortalLink>
+              <div className="flex items-center gap-0">
+                <ClientPortalLink
+                  source="mobile_menu"
+                  onClick={() => setMobileOpen(false)}
+                  className={cn(
+                    buttonVariants({ variant: "outline", size: "lg" }),
+                    "flex-1 rounded-r-none border-r-0"
+                  )}
+                >
+                  <LockKeyhole aria-hidden />
+                  Client Portal
+                </ClientPortalLink>
+                <Link
+                  href={clientPortalInfoUrl}
+                  onClick={() => setMobileOpen(false)}
+                  aria-label="Learn about the Client Portal"
+                  title="Learn about the Client Portal"
+                  className={cn(
+                    buttonVariants({ variant: "outline", size: "icon-lg" }),
+                    "size-12 rounded-l-none"
+                  )}
+                >
+                  <Info aria-hidden />
+                </Link>
+              </div>
               <Link
                 href="/contact"
                 onClick={() => setMobileOpen(false)}
