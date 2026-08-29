@@ -1,6 +1,13 @@
 import type { Metadata } from "next";
 import Link from "next/link";
-import { ArrowRight, CheckCircle2, NotebookPen, ShieldCheck, Users } from "lucide-react";
+import {
+  ArrowRight,
+  CheckCircle2,
+  LockKeyhole,
+  NotebookPen,
+  ShieldCheck,
+  Users,
+} from "lucide-react";
 import { buttonVariants } from "@/components/ui/button";
 import { CtaBand, SectionShell } from "@/components/page-sections";
 import { services } from "@/lib/services";
@@ -72,7 +79,7 @@ export default function HomePage() {
             <p className="reveal reveal-delay-2 mt-6 max-w-xl text-lg leading-relaxed text-muted-foreground">
               {siteConfig.description}
             </p>
-            <div className="reveal reveal-delay-3 mt-8 flex flex-col gap-3 sm:flex-row">
+            <div className="reveal reveal-delay-3 mt-8 flex flex-col gap-3 sm:flex-row sm:flex-wrap">
               <Link
                 href="/contact"
                 className={buttonVariants({ variant: "brand", size: "lg" })}
@@ -80,10 +87,11 @@ export default function HomePage() {
                 Request a Consultation
               </Link>
               <Link
-                href="/services"
+                href="/client-portal"
                 className={buttonVariants({ variant: "outline", size: "lg" })}
               >
-                Explore Our Services
+                <LockKeyhole aria-hidden />
+                Client Portal
               </Link>
             </div>
             <p className="mt-6 text-sm text-muted-foreground">
@@ -201,18 +209,19 @@ export default function HomePage() {
           </div>
           <div className="rounded-2xl border border-border bg-card p-8">
             <p className="font-heading text-2xl font-semibold text-ink">
-              Already a tax client?
+              Already a client?
             </p>
             <p className="mt-3 text-muted-foreground leading-relaxed">
-              Many personal tax clients also need bookkeeping, business tax
-              support, sales tax help, formation, or licensing. Ask us how we
-              can expand the relationship beyond tax season.
+              Use the secure client portal to upload tax documents, sign your
+              engagement letter, review and sign your tax return, and access
+              your records whenever you need them.
             </p>
             <Link
-              href="/contact?service=bookkeeping"
+              href="/client-portal"
               className={cn(buttonVariants({ variant: "outline" }), "mt-6")}
             >
-              Ask About Bookkeeping
+              <LockKeyhole aria-hidden />
+              Access Client Portal
             </Link>
           </div>
         </div>
@@ -281,6 +290,8 @@ export default function HomePage() {
         title="Need Help With Your Taxes, Books, or Business?"
         primaryLabel="Request a Consultation"
         primaryHref="/contact"
+        secondaryLabel="Client Portal"
+        secondaryHref="/client-portal"
       />
     </>
   );

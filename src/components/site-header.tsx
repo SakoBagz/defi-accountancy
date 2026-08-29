@@ -3,7 +3,8 @@
 import Image from "next/image";
 import Link from "next/link";
 import { useState } from "react";
-import { ChevronDown, Menu, Phone, X } from "lucide-react";
+import { ChevronDown, LockKeyhole, Menu, Phone, X } from "lucide-react";
+import { ClientPortalLink } from "@/components/client-portal-link";
 import { buttonVariants } from "@/components/ui/button";
 import { services } from "@/lib/services";
 import { siteConfig } from "@/lib/site";
@@ -122,6 +123,16 @@ export function SiteHeader() {
           >
             <Phone className="size-4" />
           </a>
+          <ClientPortalLink
+            source="header"
+            className={cn(
+              buttonVariants({ variant: "outline", size: "sm" }),
+              "hidden md:inline-flex"
+            )}
+          >
+            <LockKeyhole aria-hidden />
+            Client Portal
+          </ClientPortalLink>
           <Link
             href="/contact"
             className={cn(
@@ -187,6 +198,14 @@ export function SiteHeader() {
               </Link>
             ))}
             <div className="mt-6 flex flex-col gap-2 px-1">
+              <ClientPortalLink
+                source="mobile_menu"
+                onClick={() => setMobileOpen(false)}
+                className={buttonVariants({ variant: "outline", size: "lg" })}
+              >
+                <LockKeyhole aria-hidden />
+                Client Portal
+              </ClientPortalLink>
               <Link
                 href="/contact"
                 onClick={() => setMobileOpen(false)}

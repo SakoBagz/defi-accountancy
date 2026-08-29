@@ -82,12 +82,12 @@ export function SiteFooter() {
             </li>
             {siteConfig.clientPortalUrl ? (
               <li>
-                <a
-                  href={siteConfig.clientPortalUrl}
+                <Link
+                  href="/client-portal"
                   className="text-primary-foreground/85 transition-colors duration-200 ease-out-strong hover:text-primary-foreground"
                 >
                   Client Portal
-                </a>
+                </Link>
               </li>
             ) : null}
           </ul>
