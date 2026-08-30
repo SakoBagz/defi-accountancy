@@ -3,7 +3,7 @@ export const siteConfig = {
   descriptor: "Tax, Accounting & Business Services",
   tagline: "Accounting, Tax & Business Services You Can Rely On",
   description:
-    "Personal and business tax preparation, bookkeeping, sales tax, business formation, licensing, and year-round accounting support.",
+    "Personal and business tax preparation, bookkeeping, payroll, sales tax, business formation, licensing, and year-round accounting support.",
   url: process.env.NEXT_PUBLIC_SITE_URL ?? "https://www.thedefiaccountancy.com",
   phone: "(424) 292-2000",
   phoneHref: "tel:+14242922000",
@@ -29,6 +29,7 @@ export type ServiceSlug =
   | "personal-tax"
   | "business-tax"
   | "bookkeeping"
+  | "payroll"
   | "sales-tax"
   | "business-formation"
   | "business-licenses";
@@ -37,6 +38,7 @@ export type ConsultationService =
   | "personal-taxes"
   | "business-taxes"
   | "bookkeeping"
+  | "payroll"
   | "sales-tax"
   | "business-formation"
   | "business-licensing"
@@ -49,6 +51,7 @@ export const consultationServiceOptions: {
   { value: "personal-taxes", label: "Personal Taxes" },
   { value: "business-taxes", label: "Business Taxes" },
   { value: "bookkeeping", label: "Bookkeeping" },
+  { value: "payroll", label: "Payroll Services" },
   { value: "sales-tax", label: "Sales Tax" },
   { value: "business-formation", label: "Business Formation" },
   { value: "business-licensing", label: "Business Licensing" },
@@ -62,6 +65,7 @@ export const slugToConsultationService: Record<
   "personal-tax": "personal-taxes",
   "business-tax": "business-taxes",
   bookkeeping: "bookkeeping",
+  payroll: "payroll",
   "sales-tax": "sales-tax",
   "business-formation": "business-formation",
   "business-licenses": "business-licensing",

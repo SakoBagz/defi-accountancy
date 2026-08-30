@@ -1,5 +1,6 @@
 import type { Metadata } from "next";
 import Image from "next/image";
+import { CtecCredential } from "@/components/ctec-credential";
 import { CtaBand, PageHero, SectionShell } from "@/components/page-sections";
 import { siteConfig } from "@/lib/site";
 
@@ -33,6 +34,12 @@ export default function AboutPage() {
             <p className="mt-1 text-center text-sm text-muted-foreground">
               {siteConfig.descriptor}
             </p>
+            <div className="mt-6 border-t border-border pt-6">
+              <CtecCredential
+                id="ctec-credential"
+                logoClassName="max-w-[280px]"
+              />
+            </div>
           </div>
 
           <div className="space-y-8">
@@ -41,9 +48,10 @@ export default function AboutPage() {
               <p className="mt-3 leading-relaxed text-muted-foreground">
                 DeFi Accountancy started as a trusted tax preparation practice
                 serving individuals through busy filing seasons. Today we
-                continue that work while expanding into bookkeeping, business
-                tax, sales tax, formation, and licensing—so clients can build one
-                lasting accounting relationship instead of juggling multiple
+                continue that work while expanding into bookkeeping, payroll,
+                business tax, sales tax, formation, and licensing—so clients can
+                build one lasting accounting relationship instead of juggling
+                multiple
                 providers.
               </p>
             </div>

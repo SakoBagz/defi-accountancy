@@ -1,11 +1,15 @@
 import Image from "next/image";
 import Link from "next/link";
+import { CtecCredential } from "@/components/ctec-credential";
 import { services } from "@/lib/services";
 import { siteConfig } from "@/lib/site";
 
 export function SiteFooter() {
   return (
-    <footer className="border-t border-border bg-primary text-primary-foreground">
+    <footer
+      id="site-footer"
+      className="border-t border-border bg-primary text-primary-foreground"
+    >
       <div className="mx-auto grid max-w-6xl gap-10 px-4 py-14 sm:px-6 md:grid-cols-2 lg:grid-cols-4 lg:px-8">
         <div className="space-y-4">
           <div className="flex items-center gap-3">
@@ -29,6 +33,12 @@ export function SiteFooter() {
             Full-service tax, accounting, bookkeeping, and business services for
             individuals and business owners.
           </p>
+          <CtecCredential
+            variant="dark"
+            className="border-t border-primary-foreground/15 pt-5"
+            logoClassName="max-w-[240px]"
+            priority
+          />
         </div>
 
         <div>

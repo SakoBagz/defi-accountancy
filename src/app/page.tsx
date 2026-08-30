@@ -33,7 +33,7 @@ const reasons = [
   {
     icon: ShieldCheck,
     title: "One Trusted Relationship",
-    body: "Taxes, bookkeeping, sales tax, formation, and licensing in one place.",
+    body: "Taxes, bookkeeping, payroll, sales tax, formation, and licensing in one place.",
   },
 ];
 
@@ -143,8 +143,8 @@ export default function HomePage() {
             Services for individuals and businesses
           </h2>
           <p className="mt-3 text-muted-foreground">
-            From personal tax returns to formation, licensing, and recurring
-            bookkeeping—clear offerings with a next step on every page.
+            From personal tax returns to formation, licensing, payroll, and
+            recurring bookkeeping—clear offerings with a next step on every page.
           </p>
         </div>
         <div className="grid gap-4 sm:grid-cols-2 lg:grid-cols-3">
