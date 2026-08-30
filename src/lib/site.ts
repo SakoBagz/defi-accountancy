@@ -9,6 +9,9 @@ export const siteConfig = {
   phoneHref: "tel:+14242922000",
   email: "raz@thedefiaccountancy.com",
   emailHref: "mailto:raz@thedefiaccountancy.com",
+  /** DeFi Accountancy was established on June 15, 2021. */
+  establishedYear: 2021,
+  establishedDate: "June 15, 2021",
   hours: [
     { days: "Monday – Friday", time: "9:00 AM – 6:00 PM" },
     { days: "Saturday – Sunday", time: "10:00 AM – 3:00 PM" },

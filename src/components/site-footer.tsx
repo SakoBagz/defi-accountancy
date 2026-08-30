@@ -4,8 +4,6 @@ import { services } from "@/lib/services";
 import { siteConfig } from "@/lib/site";
 
 export function SiteFooter() {
-  const year = new Date().getFullYear();
-
   return (
     <footer className="border-t border-border bg-primary text-primary-foreground">
       <div className="mx-auto grid max-w-6xl gap-10 px-4 py-14 sm:px-6 md:grid-cols-2 lg:grid-cols-4 lg:px-8">
@@ -132,7 +130,7 @@ export function SiteFooter() {
       <div className="border-t border-primary-foreground/10">
         <div className="mx-auto flex max-w-6xl flex-col gap-3 px-4 py-6 text-sm text-primary-foreground/65 sm:flex-row sm:items-center sm:justify-between sm:px-6 lg:px-8">
           <p>
-            © {year} {siteConfig.name}. All rights reserved.
+            © {siteConfig.establishedYear} {siteConfig.name}. All rights reserved.
           </p>
           <div className="flex gap-4">
             <Link
