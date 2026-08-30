@@ -4,7 +4,11 @@ import { ArrowRight } from "lucide-react";
 import { buttonVariants } from "@/components/ui/button";
 import { CtaBand, PageHero, SectionShell } from "@/components/page-sections";
 import { getService, type Service } from "@/lib/services";
-import { slugToConsultationService, type ServiceSlug } from "@/lib/site";
+import {
+  siteConfig,
+  slugToConsultationService,
+  type ServiceSlug,
+} from "@/lib/site";
 import { cn } from "@/lib/utils";
 
 type ServicePageProps = {
@@ -14,12 +18,14 @@ type ServicePageProps = {
 
 export function serviceMetadata(slug: ServiceSlug): Metadata {
   const service = getService(slug);
+  const description = `${service.summary} Based in ${siteConfig.location.display} with remote services available nationwide, subject to state-specific requirements.`;
+
   return {
     title: service.name,
-    description: service.summary,
+    description,
     openGraph: {
       title: service.name,
-      description: service.summary,
+      description,
     },
   };
 }

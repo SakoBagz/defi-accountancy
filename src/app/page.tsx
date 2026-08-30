@@ -15,7 +15,6 @@ import { siteConfig } from "@/lib/site";
 import { cn } from "@/lib/utils";
 
 export const metadata: Metadata = {
-  title: "Home",
   description: siteConfig.description,
 };
 
@@ -103,6 +102,9 @@ export default function HomePage() {
                 {siteConfig.phone}
               </a>
             </p>
+            <p className="mt-2 text-sm text-muted-foreground">
+              Based in {siteConfig.location.display}. {siteConfig.remoteServiceNote}
+            </p>
           </div>
 
           <div className="reveal reveal-delay-2 rounded-2xl border border-border/80 bg-card/80 p-6 shadow-[0_20px_50px_-28px_rgba(20,35,60,0.35)] backdrop-blur-sm sm:p-8">
@@ -143,7 +145,8 @@ export default function HomePage() {
             Services for individuals and businesses
           </h2>
           <p className="mt-3 text-muted-foreground">
-            From personal tax returns to formation, licensing, payroll, and
+            Based in {siteConfig.location.display}, we support clients remotely
+            with personal tax returns, formation, licensing, payroll, and
             recurring bookkeeping—clear offerings with a next step on every page.
           </p>
         </div>

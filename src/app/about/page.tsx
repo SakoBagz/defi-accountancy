@@ -7,7 +7,7 @@ import { siteConfig } from "@/lib/site";
 export const metadata: Metadata = {
   title: "About",
   description:
-    "Learn about DeFi Accountancy—tax, accounting, bookkeeping, and business services for individuals and business owners.",
+    "Learn about DeFi Accountancy, a Los Angeles, CA tax and accounting firm providing remote service for individuals and business owners.",
 };
 
 export default function AboutPage() {
@@ -15,7 +15,7 @@ export default function AboutPage() {
     <>
       <PageHero
         title="About DeFi Accountancy"
-        description="We help individuals and business owners handle taxes, bookkeeping, and business accounting without making the process unnecessarily complicated."
+        description="Based in Los Angeles, CA, we help individuals and business owners handle taxes, bookkeeping, payroll, and business accounting remotely nationwide, subject to state-specific requirements."
       />
 
       <SectionShell>
@@ -51,17 +51,18 @@ export default function AboutPage() {
                 continue that work while expanding into bookkeeping, payroll,
                 business tax, sales tax, formation, and licensing—so clients can
                 build one lasting accounting relationship instead of juggling
-                multiple
-                providers.
+                multiple providers.
               </p>
             </div>
             <div>
               <h2 className="font-heading text-2xl font-semibold">Who we serve</h2>
               <p className="mt-3 leading-relaxed text-muted-foreground">
                 We work with individual taxpayers, small business owners, and
-                people starting new businesses. Whether you need a personal
-                return, monthly books, or help forming an LLC, we aim to make the
-                next step clear.
+                people starting new businesses. Based in Los Angeles, CA, we
+                serve clients remotely nationwide, subject to state-specific
+                requirements. Whether you need a personal return,
+                monthly books, payroll support, or help forming an LLC, we aim to
+                make the next step clear.
               </p>
             </div>
             <div>

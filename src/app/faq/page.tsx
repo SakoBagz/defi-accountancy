@@ -5,7 +5,7 @@ import { siteConfig } from "@/lib/site";
 export const metadata: Metadata = {
   title: "FAQ",
   description:
-    "Answers to common questions about tax preparation, bookkeeping, business services, and working with DeFi Accountancy.",
+    "Answers about tax preparation, bookkeeping, payroll, business services, and remote service from DeFi Accountancy in Los Angeles, CA.",
 };
 
 const faqGroups = [
@@ -81,7 +81,11 @@ const faqGroups = [
       },
       {
         q: "Do you work with remote clients?",
-        a: "Yes. Many engagements can be handled remotely. Reach out and we'll confirm what works best for your situation.",
+        a: `Yes. DeFi Accountancy is based in ${siteConfig.location.display} and works remotely with clients nationwide, subject to state-specific requirements. Reach out and we'll confirm what works best for your situation.`,
+      },
+      {
+        q: "Where is DeFi Accountancy located?",
+        a: `DeFi Accountancy is based in ${siteConfig.location.display}. Remote services are available nationwide, subject to state-specific requirements, so many engagements can be handled without an in-person visit.`,
       },
     ],
   },
@@ -92,7 +96,7 @@ export default function FaqPage() {
     <>
       <PageHero
         title="Frequently Asked Questions"
-        description="Straightforward answers about taxes, bookkeeping, business services, and how to get started."
+        description="Straightforward answers about taxes, bookkeeping, payroll, business services, and how to get started with a Los Angeles, CA firm serving clients nationwide through remote service."
       />
       <SectionShell>
         <div className="mx-auto max-w-3xl space-y-10">

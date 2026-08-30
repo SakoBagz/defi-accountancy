@@ -7,7 +7,7 @@ import { siteConfig } from "@/lib/site";
 export const metadata: Metadata = {
   title: "Contact",
   description:
-    "Request a consultation with DeFi Accountancy. Call, email, or send a secure inquiry about tax, bookkeeping, or business services.",
+    "Contact DeFi Accountancy in Los Angeles, CA for tax, bookkeeping, payroll, and business services with remote support.",
 };
 
 export default function ContactPage() {
@@ -53,6 +53,14 @@ export default function ContactPage() {
                   </li>
                 ))}
               </ul>
+            </div>
+            <div>
+              <h2 className="font-heading text-xl font-semibold">
+                Location &amp; remote service
+              </h2>
+              <p className="mt-2 leading-relaxed text-muted-foreground">
+                Based in {siteConfig.location.display}. {siteConfig.remoteServiceNote}
+              </p>
             </div>
             <div className="rounded-xl border border-border bg-muted/50 p-5 text-sm leading-relaxed text-muted-foreground">
               Consultations begin with a short inquiry so we understand what you
