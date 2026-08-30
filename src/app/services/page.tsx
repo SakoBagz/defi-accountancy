@@ -8,7 +8,7 @@ import { slugToConsultationService } from "@/lib/site";
 export const metadata: Metadata = {
   title: "Services",
   description:
-    "Explore personal and business tax preparation, bookkeeping, sales tax, business formation, and licensing services from DeFi Accountancy.",
+    "Explore personal and business tax preparation, bookkeeping, payroll, sales tax, business formation, and licensing services from DeFi Accountancy.",
 };
 
 export default function ServicesPage() {

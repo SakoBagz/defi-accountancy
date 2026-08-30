@@ -12,6 +12,7 @@ const consultationSchema = z.object({
     "personal-taxes",
     "business-taxes",
     "bookkeeping",
+    "payroll",
     "sales-tax",
     "business-formation",
     "business-licensing",

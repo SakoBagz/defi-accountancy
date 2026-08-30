@@ -114,6 +114,45 @@ export const services: Service[] = [
     cta: "Start Monthly Bookkeeping",
   },
   {
+    slug: "payroll",
+    name: "Payroll Services",
+    shortName: "Payroll",
+    href: "/services/payroll",
+    summary:
+      "Complete payroll support, from direct deposit and payroll taxes through quarterly and annual filings.",
+    description:
+      "DeFi Accountancy provides complete payroll services to help businesses pay employees accurately and stay on top of payroll tax obligations. Depending on your payroll system and approved scope, support can include payroll processing, direct deposit, payroll tax deposits and filings, quarterly and annual reporting, and year-end records.",
+    audience:
+      "Small businesses and employers who want reliable payroll processing, direct deposit, tax compliance, and organized payroll records.",
+    problems: [
+      "Payroll deadlines and tax deposits are difficult to track",
+      "Need direct deposit and consistent pay runs",
+      "Quarterly or annual payroll filings are coming due",
+      "Payroll reports do not tie cleanly to the books",
+      "Setting up, changing, or catching up a payroll process",
+    ],
+    offerings: [
+      "Payroll setup and recurring processing",
+      "Direct deposit coordination",
+      "Payroll tax calculations, deposits, and filings",
+      "Federal, state, and local payroll tax support as applicable",
+      "Quarterly payroll tax filings",
+      "Annual payroll filings and reconciliations",
+      "Year-end W-2 and applicable contractor-form coordination",
+      "Payroll registers and reporting",
+      "Coordination with bookkeeping and tax preparation",
+    ],
+    cta: "Discuss Payroll Services",
+    crossSells: [
+      {
+        title: "Keep Payroll and Books Aligned",
+        body: "Organized payroll reports make monthly bookkeeping and year-end tax preparation easier to review.",
+        href: "/services/bookkeeping",
+        linkLabel: "Explore Bookkeeping",
+      },
+    ],
+  },
+  {
     slug: "sales-tax",
     name: "Sales Tax Services",
     shortName: "Sales Tax",
