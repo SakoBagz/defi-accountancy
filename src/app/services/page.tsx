@@ -8,7 +8,7 @@ import { slugToConsultationService } from "@/lib/site";
 export const metadata: Metadata = {
   title: "Services",
   description:
-    "Explore personal and business tax preparation, bookkeeping, payroll, sales tax, business formation, and licensing services from DeFi Accountancy.",
+    "Explore personal and business tax preparation, bookkeeping, payroll, sales tax, business formation, and licensing services from DeFi Accountancy in Los Angeles, CA with remote services available nationwide.",
 };
 
 export default function ServicesPage() {
@@ -16,7 +16,7 @@ export default function ServicesPage() {
     <>
       <PageHero
         title="Our Services"
-        description="Clear offerings for individuals and business owners—with dedicated pages for each service and a straightforward path to request a consultation."
+        description="Clear offerings for individuals and business owners in Los Angeles, CA and nationwide through remote service—with dedicated pages for each service and a straightforward path to request a consultation."
       />
       <SectionShell>
         <div className="grid gap-4 md:grid-cols-2">

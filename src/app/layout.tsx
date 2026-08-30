@@ -3,6 +3,7 @@ import { Analytics } from "@vercel/analytics/next";
 import { Toaster } from "sonner";
 import { SiteFooter } from "@/components/site-footer";
 import { SiteHeader } from "@/components/site-header";
+import { services } from "@/lib/services";
 import { siteConfig } from "@/lib/site";
 import "@fontsource-variable/dm-sans";
 import "@fontsource-variable/source-serif-4";
@@ -11,12 +12,12 @@ import "./globals.css";
 export const metadata: Metadata = {
   metadataBase: new URL(siteConfig.url),
   title: {
-    default: `${siteConfig.name} | ${siteConfig.descriptor}`,
+    default: `${siteConfig.name} | ${siteConfig.seoTitle}`,
     template: `%s | ${siteConfig.name}`,
   },
   description: siteConfig.description,
   openGraph: {
-    title: siteConfig.name,
+    title: `${siteConfig.name} | ${siteConfig.seoTitle}`,
     description: siteConfig.description,
     url: siteConfig.url,
     siteName: siteConfig.name,
@@ -24,7 +25,7 @@ export const metadata: Metadata = {
   },
   twitter: {
     card: "summary_large_image",
-    title: siteConfig.name,
+    title: `${siteConfig.name} | ${siteConfig.seoTitle}`,
     description: siteConfig.description,
   },
   icons: {
@@ -37,12 +38,32 @@ export const metadata: Metadata = {
 const jsonLd = {
   "@context": "https://schema.org",
   "@type": "AccountingService",
+  "@id": `${siteConfig.url}#accounting-service`,
   name: siteConfig.name,
   description: siteConfig.description,
   url: siteConfig.url,
-  telephone: siteConfig.phone,
+  telephone: siteConfig.phoneE164,
   email: siteConfig.email,
   image: `${siteConfig.url}/logo.png`,
+  serviceType: services.map((service) => service.name),
+  areaServed: [
+    {
+      "@type": "City",
+      name: siteConfig.location.city,
+      containedInPlace: {
+        "@type": "State",
+        name: "California",
+        containedInPlace: {
+          "@type": "Country",
+          name: "United States",
+        },
+      },
+    },
+    {
+      "@type": "Country",
+      name: "United States",
+    },
+  ],
   openingHoursSpecification: [
     {
       "@type": "OpeningHoursSpecification",

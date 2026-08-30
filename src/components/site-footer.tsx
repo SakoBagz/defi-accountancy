@@ -31,7 +31,8 @@ export function SiteFooter() {
           </div>
           <p className="max-w-xs text-sm leading-relaxed text-primary-foreground/75">
             Full-service tax, accounting, bookkeeping, and business services for
-            individuals and business owners.
+            individuals and business owners, based in Los Angeles, CA with remote
+            services available nationwide.
           </p>
           <CtecCredential
             variant="dark"
@@ -130,9 +131,8 @@ export function SiteFooter() {
                 {slot.time}
               </li>
             ))}
-            {siteConfig.serviceArea ? (
-              <li>Serving {siteConfig.serviceArea}</li>
-            ) : null}
+            <li>Based in {siteConfig.location.display}</li>
+            <li>{siteConfig.remoteServiceNote}</li>
           </ul>
         </div>
       </div>
