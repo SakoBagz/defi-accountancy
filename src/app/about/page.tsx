@@ -15,7 +15,7 @@ export default function AboutPage() {
     <>
       <PageHero
         title="About DeFi Accountancy"
-        description="Based in Los Angeles, CA, we help individuals and business owners handle taxes, bookkeeping, payroll, and business accounting remotely nationwide, subject to state-specific requirements."
+        description="DeFi Accountancy exists to make accounting simpler, more personal, and more useful—so individuals and business owners can plan ahead, make informed decisions, and focus on what matters. Based in Los Angeles, CA, we work with clients remotely nationwide, subject to state-specific requirements."
       />
 
       <SectionShell>
@@ -46,23 +46,21 @@ export default function AboutPage() {
             <div>
               <h2 className="font-heading text-2xl font-semibold">Our story</h2>
               <p className="mt-3 leading-relaxed text-muted-foreground">
-                DeFi Accountancy started as a trusted tax preparation practice
-                serving individuals through busy filing seasons. Today we
-                continue that work while expanding into bookkeeping, payroll,
-                business tax, sales tax, formation, and licensing—so clients can
-                build one lasting accounting relationship instead of juggling
-                multiple providers.
+                DeFi Accountancy is built on a straightforward belief: accounting
+                should support your life and your business, not become another
+                source of stress. We help clients understand the numbers, stay
+                organized, and plan ahead so they can avoid preventable surprises
+                and use their time where it matters most.
               </p>
             </div>
             <div>
               <h2 className="font-heading text-2xl font-semibold">Who we serve</h2>
               <p className="mt-3 leading-relaxed text-muted-foreground">
                 We work with individual taxpayers, small business owners, and
-                people starting new businesses. Based in Los Angeles, CA, we
-                serve clients remotely nationwide, subject to state-specific
-                requirements. Whether you need a personal return,
-                monthly books, payroll support, or help forming an LLC, we aim to
-                make the next step clear.
+                people starting new businesses. Our role is to make the process
+                easier to navigate—from tax preparation and bookkeeping to
+                payroll and business support—while keeping the work aligned with
+                your goals.
               </p>
             </div>
             <div>
@@ -70,10 +68,13 @@ export default function AboutPage() {
                 How we work with clients
               </h2>
               <p className="mt-3 leading-relaxed text-muted-foreground">
-                Personalized service, clear communication, and practical
-                guidance. We explain options in plain language and focus on
-                accurate, reliable work you can count on—during tax season and
-                throughout the year.
+                Before recommending a service, we listen to what you are trying
+                to accomplish and what is making the process harder than it needs
+                to be. We explain options in plain language, coordinate the work,
+                and stay responsive. For business owners, we treat the business
+                with the care and attention we would give our own: organize the
+                records, discuss lawful tax-planning opportunities when
+                appropriate, and help you stay focused on growth.
               </p>
             </div>
             <div>

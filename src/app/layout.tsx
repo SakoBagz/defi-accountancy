@@ -3,6 +3,7 @@ import { Analytics } from "@vercel/analytics/next";
 import { Toaster } from "sonner";
 import { SiteFooter } from "@/components/site-footer";
 import { SiteHeader } from "@/components/site-header";
+import { industries } from "@/lib/industries";
 import { services } from "@/lib/services";
 import { siteConfig } from "@/lib/site";
 import "@fontsource-variable/dm-sans";
@@ -46,6 +47,7 @@ const jsonLd = {
   email: siteConfig.email,
   image: `${siteConfig.url}/logo.png`,
   serviceType: services.map((service) => service.name),
+  knowsAbout: industries.map((industry) => industry.name),
   areaServed: [
     {
       "@type": "City",

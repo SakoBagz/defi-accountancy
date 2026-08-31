@@ -2,9 +2,9 @@ export const siteConfig = {
   name: "DeFi Accountancy",
   descriptor: "Tax, Accounting & Business Services",
   seoTitle: "Los Angeles Tax & Accounting Services",
-  tagline: "Accounting, Tax & Business Services You Can Rely On",
+  tagline: "Simpler Accounting. Smarter Tax Decisions. More Time to Grow.",
   description:
-    "Los Angeles, CA tax and accounting services with remote support available nationwide for individuals and businesses, including tax preparation, bookkeeping, payroll, sales tax, business formation, and licensing.",
+    "Los Angeles, CA tax and accounting services for individuals and business owners, with clear bookkeeping, payroll, tax preparation, and proactive tax-planning support available nationwide through remote service.",
   url: process.env.NEXT_PUBLIC_SITE_URL ?? "https://www.thedefiaccountancy.com",
   /** The numeric display is the canonical version for accessible/click-to-call use. */
   phone: "(323) 544-3334",
@@ -32,7 +32,7 @@ export const siteConfig = {
   /** Set when a secure client portal URL is available. */
   clientPortalUrl: "https://defi.mytaxportal.online",
   trustLine:
-    "Trusted by individuals and businesses for reliable tax and accounting services.",
+    "Clear, cost-conscious support designed to simplify your finances and give you time back.",
   clientCountNote: "Serving thousands of tax clients and growing.",
 } as const;
 

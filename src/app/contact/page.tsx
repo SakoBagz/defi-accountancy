@@ -16,7 +16,7 @@ export default function ContactPage() {
     <>
       <PageHero
         title="Contact DeFi Accountancy"
-        description="Request a consultation, call us, or send a message. Tell us what you need help with and we'll get in touch."
+        description="Tell us what feels difficult, time-consuming, or unclear. We&apos;ll learn about your goals and help map out a simpler next step."
       />
       <SectionShell>
         <div className="grid gap-10 lg:grid-cols-[0.85fr_1.15fr]">
