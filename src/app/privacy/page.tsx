@@ -1,5 +1,6 @@
 import type { Metadata } from "next";
 import { PageHero, SectionShell } from "@/components/page-sections";
+import { PhoneLink } from "@/components/phone-link";
 import { siteConfig } from "@/lib/site";
 
 export const metadata: Metadata = {
@@ -82,12 +83,7 @@ export default function PrivacyPage() {
                 {siteConfig.email}
               </a>{" "}
               or{" "}
-              <a
-                href={siteConfig.phoneHref}
-                className="font-medium text-brand underline-offset-4 hover:underline"
-              >
-                {siteConfig.phone}
-              </a>
+              <PhoneLink className="font-medium text-brand underline-offset-4 hover:underline" />
               .
             </p>
           </div>

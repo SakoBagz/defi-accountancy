@@ -1,6 +1,7 @@
 import Image from "next/image";
 import Link from "next/link";
 import { CtecCredential } from "@/components/ctec-credential";
+import { PhoneLink } from "@/components/phone-link";
 import { services } from "@/lib/services";
 import { siteConfig } from "@/lib/site";
 
@@ -108,12 +109,7 @@ export function SiteFooter() {
           </p>
           <ul className="space-y-2 text-sm text-primary-foreground/85">
             <li>
-              <a
-                href={siteConfig.phoneHref}
-                className="transition-colors duration-200 ease-out-strong hover:text-primary-foreground"
-              >
-                {siteConfig.phone}
-              </a>
+              <PhoneLink className="transition-colors duration-200 ease-out-strong hover:text-primary-foreground" />
             </li>
             <li>
               <a

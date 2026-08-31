@@ -2,6 +2,7 @@ import type { Metadata } from "next";
 import { Suspense } from "react";
 import { ConsultationForm } from "@/components/consultation-form";
 import { PageHero, SectionShell } from "@/components/page-sections";
+import { PhoneLink } from "@/components/phone-link";
 import { siteConfig } from "@/lib/site";
 
 export const metadata: Metadata = {
@@ -22,12 +23,7 @@ export default function ContactPage() {
           <aside className="space-y-8">
             <div>
               <h2 className="font-heading text-xl font-semibold">Phone</h2>
-              <a
-                href={siteConfig.phoneHref}
-                className="mt-2 block text-lg text-brand underline-offset-4 hover:underline"
-              >
-                {siteConfig.phone}
-              </a>
+              <PhoneLink className="mt-2 block text-lg text-brand underline-offset-4 hover:underline" />
             </div>
             <div>
               <h2 className="font-heading text-xl font-semibold">Email</h2>
