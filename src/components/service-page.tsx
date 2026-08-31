@@ -18,7 +18,7 @@ type ServicePageProps = {
 
 export function serviceMetadata(slug: ServiceSlug): Metadata {
   const service = getService(slug);
-  const description = `${service.summary} Based in ${siteConfig.location.display} with remote services available nationwide, subject to state-specific requirements.`;
+  const description = `${service.summary} Clear, cost-conscious support from ${siteConfig.location.display} with remote services available nationwide, subject to state-specific requirements.`;
 
   return {
     title: service.name,
@@ -105,8 +105,8 @@ export function ServicePage({ slug, extra }: ServicePageProps) {
           <aside className="h-fit rounded-2xl border border-border bg-card p-6 shadow-sm lg:sticky lg:top-24">
             <p className="font-heading text-xl font-semibold">Next step</p>
             <p className="mt-2 text-sm text-muted-foreground">
-              Request a consultation and tell us what you need. We&apos;ll follow up
-              to discuss the right services for your situation.
+              Tell us what you need to simplify. We&apos;ll listen to your goals and
+              follow up with a clear next step for your situation.
             </p>
             <Link
               href={`/contact?service=${consultService}`}

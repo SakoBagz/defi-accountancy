@@ -18,7 +18,7 @@ const faqGroups = [
       },
       {
         q: "When should I contact you?",
-        a: "As soon as you have most of your documents—or earlier if you need planning help. Earlier contact makes the process smoother during busy season.",
+        a: "As soon as you have most of your documents—or earlier if you need planning help. Earlier conversations can make the process smoother and give us more time to discuss options before deadlines.",
       },
       {
         q: "Do you prepare prior-year returns?",
@@ -27,6 +27,10 @@ const faqGroups = [
       {
         q: "Do you handle both federal and state returns?",
         a: "Yes. We prepare federal returns and state returns as applicable to your filing situation.",
+      },
+      {
+        q: "Do you offer tax planning?",
+        a: "When appropriate, we discuss lawful tax-planning opportunities based on your facts, goals, and timing. Tax planning can help you make informed decisions before deadlines, but no particular tax result or savings is guaranteed.",
       },
     ],
   },
@@ -69,7 +73,7 @@ const faqGroups = [
     items: [
       {
         q: "How do I get started?",
-        a: "Request a consultation through our contact form, call us, or email us. We'll discuss your needs and the right next step.",
+        a: "Request a consultation through our contact form, call us, or email us. Tell us what feels difficult or time-consuming, and we'll discuss your goals and the right next step.",
       },
       {
         q: "How do I send sensitive documents?",

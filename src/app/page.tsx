@@ -11,7 +11,7 @@ import {
 import { buttonVariants } from "@/components/ui/button";
 import { CtaBand, SectionShell } from "@/components/page-sections";
 import { PhoneLink } from "@/components/phone-link";
-import { services } from "@/lib/services";
+import { serviceGroups } from "@/lib/services";
 import { siteConfig } from "@/lib/site";
 import { cn } from "@/lib/utils";
 
@@ -22,41 +22,41 @@ export const metadata: Metadata = {
 const reasons = [
   {
     icon: Users,
-    title: "Personalized Service",
-    body: "Clients receive individualized support rather than being treated as a transaction.",
+    title: "Cost-Conscious Guidance",
+    body: "We keep the work focused and explain where your accounting dollars go, so support feels practical and worthwhile.",
   },
   {
     icon: NotebookPen,
-    title: "Year-Round Support",
-    body: "Accounting needs do not stop after tax season—and neither do we.",
+    title: "Proactive Tax Planning",
+    body: "When it fits your situation, we discuss lawful planning opportunities before deadlines—not after the year is over.",
   },
   {
     icon: ShieldCheck,
-    title: "One Trusted Relationship",
-    body: "Taxes, bookkeeping, payroll, sales tax, formation, and licensing in one place.",
+    title: "A Partner Who Cares",
+    body: "We take time to understand your goals and treat your business with the care and attention we would want for our own.",
   },
 ];
 
 const steps = [
   {
     step: "1",
-    title: "Tell Us What You Need",
-    body: "Submit an inquiry or contact DeFi Accountancy.",
+    title: "Start With Your Goals",
+    body: "Tell us what feels complicated, what you want to improve, and where you want more time.",
   },
   {
     step: "2",
-    title: "Speak With Us",
-    body: "Discuss your situation and determine which services are appropriate.",
+    title: "Build a Clear Plan",
+    body: "We identify the right services, priorities, and planning conversations for your situation.",
   },
   {
     step: "3",
-    title: "We Handle the Work",
-    body: "We complete the agreed accounting, tax, or business service.",
+    title: "We Handle the Details",
+    body: "We keep the work organized and communicate what you need to know in plain language.",
   },
   {
     step: "4",
-    title: "Receive Ongoing Support",
-    body: "Continue working with us as additional needs arise.",
+    title: "Stay Ahead Together",
+    body: "With ongoing support, you can make decisions with better information and fewer surprises.",
   },
 ];
 
@@ -77,7 +77,10 @@ export default function HomePage() {
               {siteConfig.tagline}
             </h1>
             <p className="reveal reveal-delay-2 mt-6 max-w-xl text-lg leading-relaxed text-muted-foreground">
-              {siteConfig.description}
+              Whether you&apos;re managing personal taxes or growing a business,
+              your accounting should make life easier—not take over your time.
+              We simplify the numbers, communicate clearly, and plan ahead for
+              taxes so you can focus on what matters.
             </p>
             <div className="reveal reveal-delay-3 mt-8 flex flex-col gap-3 sm:flex-row sm:flex-wrap">
               <Link
@@ -105,14 +108,14 @@ export default function HomePage() {
 
           <div className="reveal reveal-delay-2 rounded-2xl border border-border/80 bg-card/80 p-6 shadow-[0_20px_50px_-28px_rgba(20,35,60,0.35)] backdrop-blur-sm sm:p-8">
             <p className="text-sm font-semibold uppercase tracking-wide text-brand">
-              Why clients choose us
+              What you can expect
             </p>
             <ul className="mt-5 space-y-4">
               {[
-                "Clear communication without unnecessary jargon",
-                "Support for individuals and businesses",
-                "Bookkeeping positioned for year-round clarity",
-                "A foundation for long-term accounting relationships",
+                "Cost-conscious support with clear communication",
+                "Proactive tax-planning conversations before deadlines",
+                "One relationship for tax, books, payroll, and business needs",
+                "More time to focus on running and growing your business",
               ].map((item) => (
                 <li key={item} className="flex gap-3 text-sm leading-relaxed">
                   <CheckCircle2 className="mt-0.5 size-5 shrink-0 text-brand" />
@@ -135,29 +138,50 @@ export default function HomePage() {
         </div>
       </SectionShell>
 
+      <SectionShell className="border-b border-border bg-surface py-10 sm:py-12">
+        <div className="grid gap-4 sm:grid-cols-2 lg:grid-cols-4">
+          {[
+            { value: "2021", label: "Established" },
+            { value: "Los Angeles, CA", label: "Based in" },
+            { value: "Nationwide", label: "Remote support" },
+            { value: "CTEC Registered", label: "Tax preparer credential" },
+          ].map((fact) => (
+            <div
+              key={fact.label}
+              className="rounded-xl border border-border bg-card px-5 py-4"
+            >
+              <p className="font-heading text-xl font-semibold text-ink">
+                {fact.value}
+              </p>
+              <p className="mt-1 text-sm text-muted-foreground">{fact.label}</p>
+            </div>
+          ))}
+        </div>
+      </SectionShell>
+
       <SectionShell>
         <div className="mb-10 max-w-2xl">
           <h2 className="font-heading text-3xl font-semibold tracking-tight sm:text-4xl">
             Services for individuals and businesses
           </h2>
           <p className="mt-3 text-muted-foreground">
-            Based in {siteConfig.location.display}, we support clients remotely
-            with personal tax returns, formation, licensing, payroll, and
-            recurring bookkeeping—clear offerings with a next step on every page.
+            From personal returns to recurring business support, we keep the
+            process organized and explain what matters—so you can make decisions
+            with confidence and keep your attention on your work.
           </p>
         </div>
-        <div className="grid gap-4 sm:grid-cols-2 lg:grid-cols-3">
-          {services.map((service) => (
+        <div className="grid gap-4 sm:grid-cols-2 lg:grid-cols-4">
+          {serviceGroups.map((group) => (
             <Link
-              key={service.slug}
-              href={service.href}
+              key={group.slug}
+              href={`/services#${group.slug}`}
               className="pressable hover-lift group flex flex-col rounded-xl border border-border bg-card p-6 shadow-sm"
             >
               <h3 className="font-heading text-xl font-semibold text-ink">
-                {service.name}
+                {group.name}
               </h3>
               <p className="mt-3 flex-1 text-sm leading-relaxed text-muted-foreground">
-                {service.summary}
+                {group.summary}
               </p>
               <span className="mt-5 inline-flex items-center gap-1 text-sm font-medium text-brand">
                 Learn More
@@ -172,23 +196,23 @@ export default function HomePage() {
         <div className="grid items-center gap-10 lg:grid-cols-2">
           <div>
             <p className="text-sm font-semibold uppercase tracking-[0.14em] text-brand">
-              Recurring growth focus
+              More time for what matters
             </p>
             <h2 className="mt-3 font-heading text-3xl font-semibold tracking-tight sm:text-4xl">
-              Keep Your Books Organized All Year
+              Let Your Accounting Support Your Growth
             </h2>
             <p className="mt-4 text-muted-foreground leading-relaxed">
-              Waiting until tax season to organize your books creates stress and
-              missed opportunities. Monthly bookkeeping keeps records accurate,
-              tax prep smoother, and performance clearer throughout the year.
+              When your books, payroll, and tax planning are handled proactively,
+              you spend less time chasing paperwork and more time serving
+              customers, leading your team, and growing the business.
             </p>
             <ul className="mt-6 space-y-3 text-sm">
               {[
-                "Cleaner financial records",
-                "Easier tax preparation",
-                "Better visibility into business performance",
-                "Reduced year-end stress",
-                "Ongoing professional support",
+                "Fewer last-minute surprises",
+                "Clearer view of cash and performance",
+                "Planning conversations before deadlines",
+                "One organized process",
+                "A partner who knows your goals",
               ].map((benefit) => (
                 <li key={benefit} className="flex gap-2">
                   <CheckCircle2 className="mt-0.5 size-4 shrink-0 text-brand" />
@@ -253,9 +277,9 @@ export default function HomePage() {
           ))}
         </div>
         <p className="mt-8 max-w-3xl text-muted-foreground">
-          We explain financial matters in understandable terms and help
-          individuals and businesses handle taxes, bookkeeping, and business
-          accounting without making the process unnecessarily complicated.
+          The goal is simple: make accounting easier to understand, easier to
+          manage, and more useful to your next decision—so you can focus on your
+          clients, your family, and your growth.
         </p>
       </SectionShell>
 
@@ -286,7 +310,8 @@ export default function HomePage() {
       </SectionShell>
 
       <CtaBand
-        title="Need Help With Your Taxes, Books, or Business?"
+        title="Spend More Time Growing. We&apos;ll Handle the Accounting."
+        description="Tell us where the process feels difficult, and we&apos;ll help map out a simpler next step."
         primaryLabel="Request a Consultation"
         primaryHref="/contact"
         secondaryLabel="Client Portal"

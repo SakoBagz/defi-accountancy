@@ -14,6 +14,13 @@ export type Service = {
   crossSells?: { title: string; body: string; href: string; linkLabel: string }[];
 };
 
+export type ServiceGroup = {
+  slug: string;
+  name: string;
+  summary: string;
+  serviceSlugs: ServiceSlug[];
+};
+
 export const services: Service[] = [
   {
     slug: "personal-tax",
@@ -241,6 +248,38 @@ export const services: Service[] = [
       "General compliance administration",
     ],
     cta: "Get Licensing Help",
+  },
+];
+
+/** The four simple service areas visitors see first, with detailed pages kept underneath. */
+export const serviceGroups: ServiceGroup[] = [
+  {
+    slug: "tax-planning-preparation",
+    name: "Tax Planning & Preparation",
+    summary:
+      "Personal and business tax returns with planning conversations to help you make informed decisions before deadlines.",
+    serviceSlugs: ["personal-tax", "business-tax"],
+  },
+  {
+    slug: "bookkeeping-financial-reporting",
+    name: "Bookkeeping & Financial Reporting",
+    summary:
+      "Monthly, catch-up, and cleanup bookkeeping that keeps records organized and easier to use.",
+    serviceSlugs: ["bookkeeping"],
+  },
+  {
+    slug: "payroll-services",
+    name: "Payroll Services",
+    summary:
+      "Complete payroll support, from direct deposit and payroll taxes through quarterly and annual filings.",
+    serviceSlugs: ["payroll"],
+  },
+  {
+    slug: "business-setup-compliance",
+    name: "Business Setup & Compliance",
+    summary:
+      "Formation, sales tax, licensing, and related administrative support for businesses.",
+    serviceSlugs: ["business-formation", "sales-tax", "business-licenses"],
   },
 ];
 

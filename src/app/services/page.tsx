@@ -2,13 +2,12 @@ import type { Metadata } from "next";
 import Link from "next/link";
 import { ArrowRight } from "lucide-react";
 import { CtaBand, PageHero, SectionShell } from "@/components/page-sections";
-import { services } from "@/lib/services";
-import { slugToConsultationService } from "@/lib/site";
+import { getService, serviceGroups } from "@/lib/services";
 
 export const metadata: Metadata = {
   title: "Services",
   description:
-    "Explore personal and business tax preparation, bookkeeping, payroll, sales tax, business formation, and licensing services from DeFi Accountancy in Los Angeles, CA with remote services available nationwide.",
+    "Explore clear, cost-conscious tax, bookkeeping, payroll, and business services from DeFi Accountancy in Los Angeles, CA, with proactive planning support available nationwide through remote service.",
 };
 
 export default function ServicesPage() {
@@ -16,39 +15,49 @@ export default function ServicesPage() {
     <>
       <PageHero
         title="Our Services"
-        description="Clear offerings for individuals and business owners in Los Angeles, CA and nationwide through remote service—with dedicated pages for each service and a straightforward path to request a consultation."
+        description="We organize our services into four practical areas so you can spend less time managing paperwork and more time running your business. Choose an area below, or contact us and we&apos;ll help map out the right next step."
       />
       <SectionShell>
         <div className="grid gap-4 md:grid-cols-2">
-          {services.map((service) => (
+          {serviceGroups.map((group) => (
             <article
-              key={service.slug}
-              className="flex flex-col rounded-xl border border-border bg-card p-6"
+              key={group.slug}
+              id={group.slug}
+              className="flex scroll-mt-24 flex-col rounded-xl border border-border bg-card p-6"
             >
               <h2 className="font-heading text-2xl font-semibold">
-                {service.name}
+                {group.name}
               </h2>
               <p className="mt-3 flex-1 text-sm leading-relaxed text-muted-foreground">
-                {service.summary}
+                {group.summary}
               </p>
-              <p className="mt-4 text-sm text-foreground/80">
-                <span className="font-medium">Common needs: </span>
-                {service.offerings.slice(0, 3).join(", ")}
-                {service.offerings.length > 3 ? ", and more" : ""}
-              </p>
+              <div className="mt-5 space-y-2">
+                <p className="text-sm font-medium text-foreground/80">
+                  Detailed services
+                </p>
+                <ul className="space-y-1.5 text-sm text-muted-foreground">
+                  {group.serviceSlugs.map((serviceSlug) => {
+                    const service = getService(serviceSlug);
+                    return (
+                      <li key={service.slug}>
+                        <Link
+                          href={service.href}
+                          className="inline-flex items-center gap-1 text-brand underline-offset-4 hover:underline"
+                        >
+                          {service.name}
+                          <ArrowRight className="size-3.5" />
+                        </Link>
+                      </li>
+                    );
+                  })}
+                </ul>
+              </div>
               <div className="mt-6 flex flex-wrap items-center gap-4">
                 <Link
-                  href={service.href}
-                  className="inline-flex items-center gap-1 text-sm font-medium text-brand"
-                >
-                  Learn more
-                  <ArrowRight className="size-4" />
-                </Link>
-                <Link
-                  href={`/contact?service=${slugToConsultationService[service.slug]}`}
+                  href="/contact"
                   className="text-sm font-medium text-foreground underline-offset-4 hover:underline"
                 >
-                  Request a consultation
+                  Discuss this area
                 </Link>
               </div>
             </article>

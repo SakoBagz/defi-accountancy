@@ -31,9 +31,9 @@ export function SiteFooter() {
             </div>
           </div>
           <p className="max-w-xs text-sm leading-relaxed text-primary-foreground/75">
-            Full-service tax, accounting, bookkeeping, and business services for
-            individuals and business owners, based in Los Angeles, CA with remote
-            services available nationwide.
+            Cost-conscious, caring tax and accounting support that simplifies the
+            work behind your finances and gives you more time to focus on what
+            matters.
           </p>
           <CtecCredential
             variant="dark"
@@ -80,6 +80,14 @@ export function SiteFooter() {
                 className="text-primary-foreground/85 transition-colors duration-200 ease-out-strong hover:text-primary-foreground"
               >
                 FAQ
+              </Link>
+            </li>
+            <li>
+              <Link
+                href="/industries"
+                className="text-primary-foreground/85 transition-colors duration-200 ease-out-strong hover:text-primary-foreground"
+              >
+                Industries
               </Link>
             </li>
             <li>

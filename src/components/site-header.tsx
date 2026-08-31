@@ -7,7 +7,7 @@ import { ChevronDown, Info, LockKeyhole, Menu, Phone, X } from "lucide-react";
 import { ClientPortalLink } from "@/components/client-portal-link";
 import { PhoneLink } from "@/components/phone-link";
 import { buttonVariants } from "@/components/ui/button";
-import { services } from "@/lib/services";
+import { serviceGroups } from "@/lib/services";
 import { siteConfig } from "@/lib/site";
 import { cn } from "@/lib/utils";
 
@@ -19,6 +19,7 @@ const clientPortalInfoUrl = new URL(
 const navLinks = [
   { href: "/", label: "Home" },
   { href: "/about", label: "About" },
+  { href: "/industries", label: "Industries" },
   { href: "/faq", label: "FAQ" },
   { href: "/contact", label: "Contact" },
 ];
@@ -95,15 +96,15 @@ export function SiteHeader() {
                 >
                   All Services
                 </Link>
-                {services.map((service) => (
+                {serviceGroups.map((group) => (
                   <Link
-                    key={service.slug}
-                    href={service.href}
+                    key={group.slug}
+                    href={`/services#${group.slug}`}
                     role="menuitem"
                     className="block rounded-md px-3 py-2 text-sm hover:bg-muted"
                     onClick={() => setServicesOpen(false)}
                   >
-                    {service.shortName}
+                    {group.name}
                   </Link>
                 ))}
               </div>
@@ -203,17 +204,17 @@ export function SiteHeader() {
             >
               All Services
             </Link>
-            {services.map((service) => (
+            {serviceGroups.map((group) => (
               <Link
-                key={service.slug}
-                href={service.href}
+                key={group.slug}
+                href={`/services#${group.slug}`}
                 onClick={() => setMobileOpen(false)}
                 className={cn(
                   "pressable rounded-md px-3 py-3 text-base font-medium",
-                  service.slug === "bookkeeping" && "text-brand"
+                  group.slug === "bookkeeping-financial-reporting" && "text-brand"
                 )}
               >
-                {service.shortName}
+                {group.name}
               </Link>
             ))}
             <div className="mt-6 flex flex-col gap-2 px-1">
