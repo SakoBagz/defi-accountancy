@@ -11,13 +11,15 @@ import {
 import { buttonVariants } from "@/components/ui/button";
 import { CtaBand, SectionShell } from "@/components/page-sections";
 import { PhoneLink } from "@/components/phone-link";
-import { serviceGroups } from "@/lib/services";
+import { getService, serviceGroups } from "@/lib/services";
 import { siteConfig } from "@/lib/site";
 import { cn } from "@/lib/utils";
 
 export const metadata: Metadata = {
   description: siteConfig.description,
 };
+
+const notaryService = getService("notary");
 
 const reasons = [
   {
@@ -156,6 +158,30 @@ export default function HomePage() {
               <p className="mt-1 text-sm text-muted-foreground">{fact.label}</p>
             </div>
           ))}
+        </div>
+        <div className="mt-6 rounded-2xl border border-brand/25 bg-brand/5 p-6 sm:flex sm:items-center sm:justify-between sm:gap-8">
+          <div>
+            <p className="text-sm font-semibold uppercase tracking-[0.14em] text-brand">
+              Additional service
+            </p>
+            <h3 className="mt-2 font-heading text-2xl font-semibold text-ink">
+              {notaryService.name}
+            </h3>
+            <p className="mt-2 max-w-2xl text-sm leading-relaxed text-muted-foreground">
+              {notaryService.summary} In-person appointments are available in
+              Los Angeles County, with statewide California appointments by
+              arrangement.
+            </p>
+          </div>
+          <Link
+            href={notaryService.href}
+            className={cn(
+              buttonVariants({ variant: "outline", size: "lg" }),
+              "mt-5 shrink-0 sm:mt-0"
+            )}
+          >
+            Schedule a Notary Appointment
+          </Link>
         </div>
       </SectionShell>
 

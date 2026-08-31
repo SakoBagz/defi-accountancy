@@ -7,15 +7,17 @@ import { getService, serviceGroups } from "@/lib/services";
 export const metadata: Metadata = {
   title: "Services",
   description:
-    "Explore clear, cost-conscious tax, bookkeeping, payroll, and business services from DeFi Accountancy in Los Angeles, CA, with proactive planning support available nationwide through remote service.",
+    "Explore clear, cost-conscious tax, bookkeeping, payroll, business, and in-person notary services from DeFi Accountancy in Los Angeles, CA, with remote accounting support available nationwide.",
 };
 
 export default function ServicesPage() {
+  const notary = getService("notary");
+
   return (
     <>
       <PageHero
         title="Our Services"
-        description="We organize our services into four practical areas so you can spend less time managing paperwork and more time running your business. Choose an area below, or contact us and we&apos;ll help map out the right next step."
+        description="We organize our accounting and business services into four practical areas, with Notary Services available as a separate in-person offering. Choose an area below, or contact us and we&apos;ll help map out the right next step."
       />
       <SectionShell>
         <div className="grid gap-4 md:grid-cols-2">
@@ -63,6 +65,30 @@ export default function ServicesPage() {
             </article>
           ))}
         </div>
+        <article
+          id="notary-services"
+          className="mt-6 flex scroll-mt-24 flex-col gap-6 rounded-xl border border-brand/25 bg-brand/5 p-6 sm:flex-row sm:items-center sm:justify-between"
+        >
+          <div>
+            <p className="text-sm font-semibold uppercase tracking-[0.14em] text-brand">
+              Additional service
+            </p>
+            <h2 className="mt-2 font-heading text-2xl font-semibold">
+              {notary.name}
+            </h2>
+            <p className="mt-3 max-w-2xl text-sm leading-relaxed text-muted-foreground">
+              {notary.summary} Travel, after-hours, and urgent appointment fees
+              are quoted in advance.
+            </p>
+          </div>
+          <Link
+            href={notary.href}
+            className="inline-flex shrink-0 items-center gap-1 text-sm font-medium text-brand underline-offset-4 hover:underline"
+          >
+            Learn more
+            <ArrowRight className="size-4" />
+          </Link>
+        </article>
       </SectionShell>
       <CtaBand
         title="Not sure which service you need?"

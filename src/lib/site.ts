@@ -4,7 +4,7 @@ export const siteConfig = {
   seoTitle: "Los Angeles Tax & Accounting Services",
   tagline: "Simpler Accounting. Smarter Tax Decisions. More Time to Grow.",
   description:
-    "Los Angeles, CA tax and accounting services for individuals and business owners, with clear bookkeeping, payroll, tax preparation, and proactive tax-planning support available nationwide through remote service.",
+    "Los Angeles, CA tax and accounting services for individuals and business owners, with clear bookkeeping, payroll, tax preparation, and proactive tax-planning support available nationwide through remote service, plus in-person California notary appointments.",
   url: process.env.NEXT_PUBLIC_SITE_URL ?? "https://www.thedefiaccountancy.com",
   /** The numeric display is the canonical version for accessible/click-to-call use. */
   phone: "(323) 544-3334",
@@ -29,6 +29,8 @@ export const siteConfig = {
   serviceArea: "Los Angeles, CA",
   remoteServiceNote:
     "Remote services available nationwide, subject to state-specific requirements.",
+  notaryServiceNote:
+    "In-person notary appointments available in Los Angeles County and throughout California by appointment.",
   /** Set when a secure client portal URL is available. */
   clientPortalUrl: "https://defi.mytaxportal.online",
   trustLine:
@@ -43,7 +45,8 @@ export type ServiceSlug =
   | "payroll"
   | "sales-tax"
   | "business-formation"
-  | "business-licenses";
+  | "business-licenses"
+  | "notary";
 
 export type ConsultationService =
   | "personal-taxes"
@@ -53,6 +56,7 @@ export type ConsultationService =
   | "sales-tax"
   | "business-formation"
   | "business-licensing"
+  | "notary"
   | "other";
 
 export const consultationServiceOptions: {
@@ -66,6 +70,7 @@ export const consultationServiceOptions: {
   { value: "sales-tax", label: "Sales Tax" },
   { value: "business-formation", label: "Business Formation" },
   { value: "business-licensing", label: "Business Licensing" },
+  { value: "notary", label: "Notary Services" },
   { value: "other", label: "Other" },
 ];
 
@@ -80,4 +85,5 @@ export const slugToConsultationService: Record<
   "sales-tax": "sales-tax",
   "business-formation": "business-formation",
   "business-licenses": "business-licensing",
+  notary: "notary",
 };

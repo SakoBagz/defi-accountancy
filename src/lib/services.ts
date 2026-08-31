@@ -249,6 +249,36 @@ export const services: Service[] = [
     ],
     cta: "Get Licensing Help",
   },
+  {
+    slug: "notary",
+    name: "California Notary Public Services",
+    shortName: "Notary Services",
+    href: "/services/notary",
+    summary:
+      "In-person California notary appointments in Los Angeles County and throughout California by appointment.",
+    description:
+      "DeFi Accountancy offers general California notary services for personal and business documents. Appointments are available in Los Angeles County, or we can travel to you throughout California by arrangement. Travel, after-hours, and urgent appointment fees are quoted in advance.",
+    audience:
+      "Individuals, families, and businesses who need a California commissioned notary for an acknowledgment, jurat, oath, or affirmation.",
+    problems: [
+      "Need a notary at a convenient location",
+      "Need a mobile, after-hours, or urgent appointment",
+      "Unsure what to bring to a signing",
+      "Want a clear and organized appointment process",
+    ],
+    offerings: [
+      "Acknowledgments — up to $15 per signature",
+      "Jurats — up to $15 per jurat",
+      "Oaths and affirmations — up to $15 per person",
+      "Appointments throughout Los Angeles County",
+      "Statewide California appointments by arrangement",
+      "Mobile appointments with a separate travel quote",
+      "After-hours and urgent appointments by availability",
+      "Currently commissioned California Notary Public",
+      "Bonded and insured service",
+    ],
+    cta: "Schedule a Notary Appointment",
+  },
 ];
 
 /** The four simple service areas visitors see first, with detailed pages kept underneath. */
