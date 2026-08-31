@@ -6,9 +6,12 @@ export const siteConfig = {
   description:
     "Los Angeles, CA tax and accounting services with remote support available nationwide for individuals and businesses, including tax preparation, bookkeeping, payroll, sales tax, business formation, and licensing.",
   url: process.env.NEXT_PUBLIC_SITE_URL ?? "https://www.thedefiaccountancy.com",
-  phone: "(424) 292-2000",
-  phoneE164: "+14242922000",
-  phoneHref: "tel:+14242922000",
+  /** The numeric display is the canonical version for accessible/click-to-call use. */
+  phone: "(323) 544-3334",
+  /** Friendly mnemonic shown in the default desktop presentation. */
+  phoneMnemonic: "(323) 544-DEFI",
+  phoneE164: "+13235443334",
+  phoneHref: "tel:+13235443334",
   email: "raz@thedefiaccountancy.com",
   emailHref: "mailto:raz@thedefiaccountancy.com",
   /** DeFi Accountancy was established on June 15, 2021. */

@@ -5,6 +5,7 @@ import Link from "next/link";
 import { useState } from "react";
 import { ChevronDown, Info, LockKeyhole, Menu, Phone, X } from "lucide-react";
 import { ClientPortalLink } from "@/components/client-portal-link";
+import { PhoneLink } from "@/components/phone-link";
 import { buttonVariants } from "@/components/ui/button";
 import { services } from "@/lib/services";
 import { siteConfig } from "@/lib/site";
@@ -248,12 +249,10 @@ export function SiteHeader() {
               >
                 Request a Consultation
               </Link>
-              <a
-                href={siteConfig.phoneHref}
+              <PhoneLink
+                prefix="Call "
                 className={buttonVariants({ variant: "outline", size: "lg" })}
-              >
-                Call {siteConfig.phone}
-              </a>
+              />
             </div>
           </nav>
         </div>

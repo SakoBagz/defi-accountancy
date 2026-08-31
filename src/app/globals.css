@@ -148,6 +148,38 @@
   }
 }
 
+/* Keep the memorable phone spelling visible while making the keypad digits
+   easy to reveal and use on any device. */
+.phone-hover-mnemonic {
+  display: inline;
+}
+
+.phone-hover-numeric {
+  display: none;
+}
+
+@media (hover: hover) and (pointer: fine) {
+  .phone-hoverable:hover .phone-hover-mnemonic,
+  .phone-hoverable:focus-visible .phone-hover-mnemonic {
+    display: none;
+  }
+
+  .phone-hoverable:hover .phone-hover-numeric,
+  .phone-hoverable:focus-visible .phone-hover-numeric {
+    display: inline;
+  }
+}
+
+@media (hover: none) {
+  .phone-hoverable .phone-hover-mnemonic {
+    display: none;
+  }
+
+  .phone-hoverable .phone-hover-numeric {
+    display: inline;
+  }
+}
+
 @keyframes fade-up {
   from {
     opacity: 0;

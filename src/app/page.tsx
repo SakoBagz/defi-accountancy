@@ -10,6 +10,7 @@ import {
 } from "lucide-react";
 import { buttonVariants } from "@/components/ui/button";
 import { CtaBand, SectionShell } from "@/components/page-sections";
+import { PhoneLink } from "@/components/phone-link";
 import { services } from "@/lib/services";
 import { siteConfig } from "@/lib/site";
 import { cn } from "@/lib/utils";
@@ -95,12 +96,7 @@ export default function HomePage() {
             </div>
             <p className="mt-6 text-sm text-muted-foreground">
               Or call{" "}
-              <a
-                href={siteConfig.phoneHref}
-                className="font-medium text-foreground underline-offset-4 hover:underline"
-              >
-                {siteConfig.phone}
-              </a>
+              <PhoneLink className="font-medium text-foreground underline-offset-4 hover:underline" />
             </p>
             <p className="mt-2 text-sm text-muted-foreground">
               Based in {siteConfig.location.display}. {siteConfig.remoteServiceNote}
