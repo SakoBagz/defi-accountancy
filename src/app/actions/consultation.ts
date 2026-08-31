@@ -16,6 +16,7 @@ const consultationSchema = z.object({
     "sales-tax",
     "business-formation",
     "business-licensing",
+    "notary",
     "other",
   ]),
   message: z

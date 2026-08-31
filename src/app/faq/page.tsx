@@ -5,7 +5,7 @@ import { siteConfig } from "@/lib/site";
 export const metadata: Metadata = {
   title: "FAQ",
   description:
-    "Answers about tax preparation, bookkeeping, payroll, business services, and remote service from DeFi Accountancy in Los Angeles, CA.",
+    "Answers about tax preparation, bookkeeping, payroll, business, notary services, and remote service from DeFi Accountancy in Los Angeles, CA.",
 };
 
 const faqGroups = [
@@ -69,6 +69,23 @@ const faqGroups = [
     ],
   },
   {
+    title: "Notary Services",
+    items: [
+      {
+        q: "What notary services do you offer?",
+        a: "We offer general California notarial acts, including acknowledgments, jurats, oaths, and affirmations, for personal and business documents when the appropriate certificate and signer requirements are met.",
+      },
+      {
+        q: "Where are notary appointments available?",
+        a: `${siteConfig.notaryServiceNote} Travel, after-hours, and urgent appointment fees are quoted before the appointment.`,
+      },
+      {
+        q: "Do you offer remote online notarization?",
+        a: "Not at this time. California currently requires the signer to personally appear before the notary for notarial acts such as acknowledgments and jurats.",
+      },
+    ],
+  },
+  {
     title: "Working With DeFi Accountancy",
     items: [
       {
@@ -100,7 +117,7 @@ export default function FaqPage() {
     <>
       <PageHero
         title="Frequently Asked Questions"
-        description="Straightforward answers about taxes, bookkeeping, payroll, business services, and how to get started with a Los Angeles, CA firm serving clients nationwide through remote service."
+        description="Straightforward answers about taxes, bookkeeping, payroll, business services, notary appointments, and how to get started with a Los Angeles, CA firm serving clients nationwide through remote accounting service."
       />
       <SectionShell>
         <div className="mx-auto max-w-3xl space-y-10">

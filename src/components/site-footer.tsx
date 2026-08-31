@@ -137,6 +137,7 @@ export function SiteFooter() {
             ))}
             <li>Based in {siteConfig.location.display}</li>
             <li>{siteConfig.remoteServiceNote}</li>
+            <li>{siteConfig.notaryServiceNote}</li>
           </ul>
         </div>
       </div>

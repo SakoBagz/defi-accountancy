@@ -7,7 +7,7 @@ import { ChevronDown, Info, LockKeyhole, Menu, Phone, X } from "lucide-react";
 import { ClientPortalLink } from "@/components/client-portal-link";
 import { PhoneLink } from "@/components/phone-link";
 import { buttonVariants } from "@/components/ui/button";
-import { serviceGroups } from "@/lib/services";
+import { getService, serviceGroups } from "@/lib/services";
 import { siteConfig } from "@/lib/site";
 import { cn } from "@/lib/utils";
 
@@ -15,6 +15,7 @@ const clientPortalInfoUrl = new URL(
   "/client-portal",
   siteConfig.url
 ).toString();
+const notaryService = getService("notary");
 
 const navLinks = [
   { href: "/", label: "Home" },
@@ -107,6 +108,14 @@ export function SiteHeader() {
                     {group.name}
                   </Link>
                 ))}
+                <Link
+                  href={notaryService.href}
+                  role="menuitem"
+                  className="block rounded-md px-3 py-2 text-sm hover:bg-muted"
+                  onClick={() => setServicesOpen(false)}
+                >
+                  {notaryService.shortName}
+                </Link>
               </div>
             ) : null}
           </div>
@@ -217,6 +226,13 @@ export function SiteHeader() {
                 {group.name}
               </Link>
             ))}
+            <Link
+              href={notaryService.href}
+              onClick={() => setMobileOpen(false)}
+              className="pressable rounded-md px-3 py-3 text-base font-medium"
+            >
+              {notaryService.shortName}
+            </Link>
             <div className="mt-6 flex flex-col gap-2 px-1">
               <div className="flex items-center gap-0">
                 <ClientPortalLink

@@ -18,7 +18,11 @@ type ServicePageProps = {
 
 export function serviceMetadata(slug: ServiceSlug): Metadata {
   const service = getService(slug);
-  const description = `${service.summary} Clear, cost-conscious support from ${siteConfig.location.display} with remote services available nationwide, subject to state-specific requirements.`;
+  const availability =
+    slug === "notary"
+      ? "In-person appointments in Los Angeles County and throughout California by arrangement."
+      : `Clear, cost-conscious support from ${siteConfig.location.display} with remote services available nationwide, subject to state-specific requirements.`;
+  const description = `${service.summary} ${availability}`;
 
   return {
     title: service.name,
@@ -33,6 +37,10 @@ export function serviceMetadata(slug: ServiceSlug): Metadata {
 export function ServicePage({ slug, extra }: ServicePageProps) {
   const service = getService(slug);
   const consultService = slugToConsultationService[slug];
+  const nextStepDescription =
+    slug === "notary"
+      ? "Tell us what you need notarized, where you are located, and when you need an appointment. We’ll confirm availability and any travel fee before the appointment."
+      : "Tell us what you need to simplify. We’ll listen to your goals and follow up with a clear next step for your situation.";
 
   return (
     <>
@@ -105,8 +113,7 @@ export function ServicePage({ slug, extra }: ServicePageProps) {
           <aside className="h-fit rounded-2xl border border-border bg-card p-6 shadow-sm lg:sticky lg:top-24">
             <p className="font-heading text-xl font-semibold">Next step</p>
             <p className="mt-2 text-sm text-muted-foreground">
-              Tell us what you need to simplify. We&apos;ll listen to your goals and
-              follow up with a clear next step for your situation.
+              {nextStepDescription}
             </p>
             <Link
               href={`/contact?service=${consultService}`}
