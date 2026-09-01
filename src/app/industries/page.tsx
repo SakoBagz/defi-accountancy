@@ -7,7 +7,7 @@ import { industries } from "@/lib/industries";
 export const metadata: Metadata = {
   title: "Industries",
   description:
-    "Industries supported by DeFi Accountancy, including e-commerce and digital creators, restaurants and hospitality, healthcare and wellness practices, nonprofit organizations, trucking, real estate, property management, plumbing, and HVAC businesses.",
+    "Industries supported by DeFi Accountancy, including e-commerce and digital creators, restaurants and hospitality, healthcare and wellness practices, entertainment and creative services, nonprofit organizations, trucking, real estate, property management, plumbing, and HVAC businesses.",
 };
 
 export default function IndustriesPage() {
