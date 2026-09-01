@@ -37,6 +37,12 @@ export const industries: Industry[] = [
       "Home health agencies, hospice providers, and related care organizations. We can discuss bookkeeping, payroll, and tax support while coordinating with the requirements of your operation.",
   },
   {
+    slug: "nonprofit-organizations",
+    name: "Nonprofit Organizations",
+    description:
+      "501(c)(3) charitable organizations and 501(c)(10) domestic fraternal societies, orders, and associations. We can discuss bookkeeping, payroll, tax filings, and financial reporting tailored to nonprofit operations.",
+  },
+  {
     slug: "medical-supply-equipment",
     name: "Medical Supply & Equipment Businesses",
     description:
