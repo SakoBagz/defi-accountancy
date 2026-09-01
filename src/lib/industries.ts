@@ -31,6 +31,12 @@ export const industries: Industry[] = [
       "Authors, independent writers, and book-publishing businesses. We can discuss income tracking, bookkeeping, and tax preparation.",
   },
   {
+    slug: "entertainment-creative-services",
+    name: "Entertainment & Creative Services",
+    description:
+      "Music producers, recording artists, event planners, video production companies, and other creative businesses. We can discuss bookkeeping, project-based income, payroll, and tax preparation support tailored to entertainment operations.",
+  },
+  {
     slug: "home-health-hospice",
     name: "Home Health & Hospice",
     description:
