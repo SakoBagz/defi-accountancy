@@ -25,6 +25,17 @@ const navLinks = [
   { href: "/contact", label: "Contact" },
 ];
 
+const refundLinks = [
+  {
+    href: "https://sa.www4.irs.gov/wmr/",
+    label: "IRS",
+  },
+  {
+    href: "https://webapp.ftb.ca.gov/refund/login?Submit=Check+refund&Lang=en-us",
+    label: "CA - FTB",
+  },
+];
+
 export function SiteHeader() {
   const [mobileOpen, setMobileOpen] = useState(false);
   const [servicesOpen, setServicesOpen] = useState(false);
@@ -56,14 +67,14 @@ export function SiteHeader() {
         </Link>
 
         <nav
-          className="hidden items-center gap-1 lg:flex"
+          className="hidden items-center gap-0 lg:flex"
           aria-label="Primary"
         >
           {navLinks.slice(0, 2).map((link) => (
             <Link
               key={link.href}
               href={link.href}
-              className="pressable rounded-md px-3 py-2 text-sm font-medium text-foreground/80 hover:text-foreground"
+              className="pressable rounded-md px-2 py-2 text-sm font-medium text-foreground/80 hover:text-foreground"
             >
               {link.label}
             </Link>
@@ -76,7 +87,7 @@ export function SiteHeader() {
           >
             <button
               type="button"
-              className="pressable inline-flex items-center gap-1 rounded-md px-3 py-2 text-sm font-medium text-foreground/80 hover:text-foreground"
+              className="pressable inline-flex items-center gap-1 rounded-md px-2 py-2 text-sm font-medium text-foreground/80 hover:text-foreground"
               aria-expanded={servicesOpen}
               aria-haspopup="true"
               onClick={() => setServicesOpen((v) => !v)}
@@ -120,15 +131,49 @@ export function SiteHeader() {
             ) : null}
           </div>
 
-          {navLinks.slice(2).map((link) => (
+          {navLinks.slice(2, 4).map((link) => (
             <Link
               key={link.href}
               href={link.href}
-              className="pressable rounded-md px-3 py-2 text-sm font-medium text-foreground/80 hover:text-foreground"
+              className="pressable rounded-md px-2 py-2 text-sm font-medium text-foreground/80 hover:text-foreground"
             >
               {link.label}
             </Link>
           ))}
+
+          <details className="group relative">
+            <summary className="pressable inline-flex cursor-pointer list-none items-center gap-1 whitespace-nowrap rounded-md px-2 py-2 text-sm font-medium text-foreground/80 hover:text-foreground [&::-webkit-details-marker]:hidden">
+              Where&apos;s My Refund?
+              <ChevronDown
+                className="size-4 opacity-70 transition-transform group-open:rotate-180"
+                aria-hidden
+              />
+            </summary>
+            <div
+              role="menu"
+              className="absolute right-0 top-full z-50 min-w-44 origin-top-right rounded-lg border border-border bg-popover p-1 shadow-md"
+            >
+              {refundLinks.map((link) => (
+                <a
+                  key={link.href}
+                  href={link.href}
+                  target="_blank"
+                  rel="noopener noreferrer"
+                  role="menuitem"
+                  className="block rounded-md px-3 py-2 text-sm font-medium hover:bg-muted"
+                >
+                  {link.label}
+                </a>
+              ))}
+            </div>
+          </details>
+
+          <Link
+            href={navLinks[4].href}
+            className="pressable rounded-md px-2 py-2 text-sm font-medium text-foreground/80 hover:text-foreground"
+          >
+            {navLinks[4].label}
+          </Link>
         </nav>
 
         <div className="flex items-center gap-2">
@@ -193,7 +238,41 @@ export function SiteHeader() {
             className="mx-auto flex max-w-6xl flex-col gap-1 px-4 py-4 sm:px-6"
             aria-label="Mobile"
           >
-            {navLinks.map((link) => (
+            {navLinks.slice(0, 4).map((link) => (
+              <Link
+                key={link.href}
+                href={link.href}
+                onClick={() => setMobileOpen(false)}
+                className="pressable rounded-md px-3 py-3 text-base font-medium"
+              >
+                {link.label}
+              </Link>
+            ))}
+            <details className="group rounded-md">
+              <summary className="pressable flex w-full cursor-pointer list-none items-center justify-between rounded-md px-3 py-3 text-left text-base font-medium [&::-webkit-details-marker]:hidden">
+                Where&apos;s My Refund?
+                <ChevronDown
+                  className="size-5 opacity-70 transition-transform group-open:rotate-180"
+                  aria-hidden
+                />
+              </summary>
+              <div role="menu" className="ml-3 border-l border-border pl-3">
+                {refundLinks.map((link) => (
+                  <a
+                    key={link.href}
+                    href={link.href}
+                    target="_blank"
+                    rel="noopener noreferrer"
+                    role="menuitem"
+                    className="pressable block rounded-md px-3 py-2 text-sm text-muted-foreground hover:bg-muted hover:text-foreground"
+                    onClick={() => setMobileOpen(false)}
+                  >
+                    {link.label}
+                  </a>
+                ))}
+              </div>
+            </details>
+            {navLinks.slice(4).map((link) => (
               <Link
                 key={link.href}
                 href={link.href}
