@@ -39,6 +39,7 @@ const refundLinks = [
 export function SiteHeader() {
   const [mobileOpen, setMobileOpen] = useState(false);
   const [servicesOpen, setServicesOpen] = useState(false);
+  const [refundOpen, setRefundOpen] = useState(false);
 
   return (
     <header className="sticky top-0 z-40 border-b border-border/80 bg-background/90 backdrop-blur-md">
@@ -141,32 +142,42 @@ export function SiteHeader() {
             </Link>
           ))}
 
-          <details className="group relative">
-            <summary className="pressable inline-flex cursor-pointer list-none items-center gap-1 whitespace-nowrap rounded-md px-2 py-2 text-sm font-medium text-foreground/80 hover:text-foreground [&::-webkit-details-marker]:hidden">
-              Where&apos;s My Refund?
-              <ChevronDown
-                className="size-4 opacity-70 transition-transform group-open:rotate-180"
-                aria-hidden
-              />
-            </summary>
-            <div
-              role="menu"
-              className="absolute right-0 top-full z-50 min-w-44 origin-top-right rounded-lg border border-border bg-popover p-1 shadow-md"
+          <div
+            className="relative"
+            onMouseEnter={() => setRefundOpen(true)}
+            onMouseLeave={() => setRefundOpen(false)}
+          >
+            <button
+              type="button"
+              className="pressable inline-flex items-center gap-1 whitespace-nowrap rounded-md px-2 py-2 text-sm font-medium text-foreground/80 hover:text-foreground"
+              aria-expanded={refundOpen}
+              aria-haspopup="true"
+              onClick={() => setRefundOpen((v) => !v)}
             >
-              {refundLinks.map((link) => (
-                <a
-                  key={link.href}
-                  href={link.href}
-                  target="_blank"
-                  rel="noopener noreferrer"
-                  role="menuitem"
-                  className="block rounded-md px-3 py-2 text-sm font-medium hover:bg-muted"
-                >
-                  {link.label}
-                </a>
-              ))}
-            </div>
-          </details>
+              Where&apos;s My Refund?
+              <ChevronDown className="size-4 opacity-70" aria-hidden />
+            </button>
+            {refundOpen ? (
+              <div
+                role="menu"
+                className="absolute right-0 top-full z-50 min-w-44 origin-top-right rounded-lg border border-border bg-popover p-1 shadow-md"
+              >
+                {refundLinks.map((link) => (
+                  <a
+                    key={link.href}
+                    href={link.href}
+                    target="_blank"
+                    rel="noopener noreferrer"
+                    role="menuitem"
+                    className="block rounded-md px-3 py-2 text-sm font-medium hover:bg-muted"
+                    onClick={() => setRefundOpen(false)}
+                  >
+                    {link.label}
+                  </a>
+                ))}
+              </div>
+            ) : null}
+          </div>
 
           <Link
             href={navLinks[4].href}
@@ -356,3 +367,4 @@ export function SiteHeader() {
     </header>
   );
 }
+
