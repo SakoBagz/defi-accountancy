@@ -7,7 +7,7 @@ import { siteConfig } from "@/lib/site";
 export const metadata: Metadata = {
   title: "About",
   description:
-    "Learn about DeFi Accountancy, a Los Angeles, CA tax and accounting firm providing remote service for individuals and business owners.",
+    "Learn about DeFi Accountancy, a Los Angeles, CA tax and accounting firm providing specialized cryptocurrency, NFT, and DeFi tax support alongside remote service for individuals and business owners.",
 };
 
 export default function AboutPage() {
@@ -15,7 +15,7 @@ export default function AboutPage() {
     <>
       <PageHero
         title="About DeFi Accountancy"
-        description="DeFi Accountancy exists to make accounting simpler, more personal, and more useful—so individuals and business owners can plan ahead, make informed decisions, and focus on what matters. Based in Los Angeles, CA, we work with clients remotely nationwide, subject to state-specific requirements."
+        description="DeFi Accountancy exists to make accounting simpler, more personal, and more useful—so individuals and business owners can plan ahead, make informed decisions, and focus on what matters. We also specialize in cryptocurrency, NFT, and DeFi tax support. Based in Los Angeles, CA, we work with clients remotely nationwide, subject to state-specific requirements."
       />
 
       <SectionShell>
@@ -60,7 +60,8 @@ export default function AboutPage() {
                 people starting new businesses. Our role is to make the process
                 easier to navigate—from tax preparation and bookkeeping to
                 payroll and business support—while keeping the work aligned with
-                your goals.
+                your goals. We also support crypto investors, NFT creators and
+                collectors, and businesses with digital-asset activity.
               </p>
             </div>
             <div>
@@ -74,7 +75,9 @@ export default function AboutPage() {
                 and stay responsive. For business owners, we treat the business
                 with the care and attention we would give our own: organize the
                 records, discuss lawful tax-planning opportunities when
-                appropriate, and help you stay focused on growth.
+                appropriate, and help you stay focused on growth. For digital-asset
+                clients, we help bring wallet, exchange, NFT, and DeFi records into
+                a clearer process for tax reporting and planning.
               </p>
             </div>
             <div>

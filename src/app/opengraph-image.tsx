@@ -43,6 +43,16 @@ export default function Image() {
           >
             {siteConfig.descriptor}
           </div>
+          <div
+            style={{
+              marginTop: 10,
+              fontSize: 24,
+              color: "#ffffff",
+              fontFamily: "sans-serif",
+            }}
+          >
+            {siteConfig.digitalAssetFocus}
+          </div>
         </div>
       </div>
     ),

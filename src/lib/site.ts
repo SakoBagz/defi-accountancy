@@ -1,10 +1,13 @@
 export const siteConfig = {
   name: "DeFi Accountancy",
   descriptor: "Tax, Accounting & Business Services",
-  seoTitle: "Los Angeles Tax & Accounting Services",
+  seoTitle: "Los Angeles Crypto Tax & Accounting Services",
   tagline: "Simpler Accounting. Smarter Tax Decisions. More Time to Grow.",
   description:
-    "Los Angeles, CA tax and accounting services for individuals and business owners, with clear bookkeeping, payroll, tax preparation, and proactive tax-planning support available nationwide through remote service, plus in-person California notary appointments.",
+    "Los Angeles, CA tax and accounting services for individuals and business owners, with specialized cryptocurrency, NFT, and DeFi tax support. We help organize and report digital-asset activity—including purchases, sales, exchanges, swaps, staking or mining rewards, airdrops, and other transactions—alongside bookkeeping, payroll, tax preparation, and proactive tax-planning support available nationwide through remote service, plus in-person California notary appointments.",
+  digitalAssetFocus: "Cryptocurrency, NFT & DeFi Tax Support",
+  digitalAssetSummary:
+    "Specialized support for cryptocurrency, NFTs, and DeFi activity—including purchases, sales, exchanges, swaps, rewards, and other digital-asset transactions.",
   url: process.env.NEXT_PUBLIC_SITE_URL ?? "https://www.thedefiaccountancy.com",
   /** The numeric display is the canonical version for accessible/click-to-call use. */
   phone: "(323) 544-3334",
@@ -51,6 +54,7 @@ export type ServiceSlug =
 export type ConsultationService =
   | "personal-taxes"
   | "business-taxes"
+  | "digital-asset-tax"
   | "bookkeeping"
   | "payroll"
   | "sales-tax"
@@ -65,6 +69,7 @@ export const consultationServiceOptions: {
 }[] = [
   { value: "personal-taxes", label: "Personal Taxes" },
   { value: "business-taxes", label: "Business Taxes" },
+  { value: "digital-asset-tax", label: "Cryptocurrency & Digital Asset Tax" },
   { value: "bookkeeping", label: "Bookkeeping" },
   { value: "payroll", label: "Payroll Services" },
   { value: "sales-tax", label: "Sales Tax" },
