@@ -5,6 +5,9 @@ import { PhoneLink } from "@/components/phone-link";
 import { services } from "@/lib/services";
 import { siteConfig } from "@/lib/site";
 
+const intuitBookkeepingBadgeUrl =
+  "https://www.credly.com/badges/545ff80e-7e23-49b9-bb05-70e2476a4b40/public_url";
+
 export function SiteFooter() {
   return (
     <footer
@@ -41,6 +44,28 @@ export function SiteFooter() {
             logoClassName="max-w-[240px]"
             priority
           />
+          <div className="border-t border-primary-foreground/15 pt-5">
+            <p className="text-xs font-semibold uppercase tracking-[0.14em] text-primary-foreground/60">
+              Additional credential
+            </p>
+            <div className="mt-3 flex flex-wrap gap-3">
+              <a
+                href={intuitBookkeepingBadgeUrl}
+                target="_blank"
+                rel="noopener noreferrer"
+                aria-label="Verify Intuit Bookkeeping Trained badge on Credly"
+                className="pressable rounded-lg focus-visible:outline-2 focus-visible:outline-offset-2 focus-visible:outline-ring"
+              >
+                <Image
+                  src="/brand/intuit/intuit-bookkeeping-certification.png"
+                  alt="Intuit Bookkeeping Trained"
+                  width={600}
+                  height={600}
+                  className="size-24 object-contain sm:size-28"
+                />
+              </a>
+            </div>
+          </div>
         </div>
 
         <div>
