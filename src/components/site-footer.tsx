@@ -7,6 +7,8 @@ import { siteConfig } from "@/lib/site";
 
 const intuitBookkeepingBadgeUrl =
   "https://www.credly.com/badges/545ff80e-7e23-49b9-bb05-70e2476a4b40/public_url";
+const intuitCryptocurrencyTaxBadgeUrl =
+  "https://www.credly.com/badges/bb008b29-75ab-4609-bbda-f3467a3087f6/public_url";
 
 export function SiteFooter() {
   return (
@@ -46,7 +48,7 @@ export function SiteFooter() {
           />
           <div className="border-t border-primary-foreground/15 pt-5">
             <p className="text-xs font-semibold uppercase tracking-[0.14em] text-primary-foreground/60">
-              Additional credential
+              Additional credentials
             </p>
             <div className="mt-3 flex flex-wrap gap-3">
               <a
@@ -61,7 +63,22 @@ export function SiteFooter() {
                   alt="Intuit Bookkeeping Trained"
                   width={600}
                   height={600}
-                  className="size-24 object-contain sm:size-28"
+                  className="size-24 object-contain"
+                />
+              </a>
+              <a
+                href={intuitCryptocurrencyTaxBadgeUrl}
+                target="_blank"
+                rel="noopener noreferrer"
+                aria-label="Verify Intuit Academy Cryptocurrency Tax Specialty badge on Credly"
+                className="pressable rounded-lg focus-visible:outline-2 focus-visible:outline-offset-2 focus-visible:outline-ring"
+              >
+                <Image
+                  src="/brand/intuit/intuit-academy-cryptocurrency-tax-exam.png"
+                  alt="Intuit Academy Cryptocurrency Tax Specialty"
+                  width={605}
+                  height={605}
+                  className="size-24 object-contain"
                 />
               </a>
             </div>
