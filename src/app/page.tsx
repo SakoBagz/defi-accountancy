@@ -3,6 +3,7 @@ import Link from "next/link";
 import {
   ArrowRight,
   CheckCircle2,
+  Coins,
   LockKeyhole,
   NotebookPen,
   ShieldCheck,
@@ -36,6 +37,11 @@ const reasons = [
     icon: ShieldCheck,
     title: "A Partner Who Cares",
     body: "We take time to understand your goals and treat your business with the care and attention we would want for our own.",
+  },
+  {
+    icon: Coins,
+    title: "Digital-Asset Tax Support",
+    body: "We help organize cryptocurrency, NFT, and DeFi activity—including purchases, sales, exchanges, swaps, staking or mining rewards, and other transactions—so tax reporting starts with a clearer picture.",
   },
 ];
 
@@ -79,10 +85,16 @@ export default function HomePage() {
               {siteConfig.tagline}
             </h1>
             <p className="reveal reveal-delay-2 mt-6 max-w-xl text-lg leading-relaxed text-muted-foreground">
-              Whether you&apos;re managing personal taxes or growing a business,
-              your accounting should make life easier—not take over your time.
-              We simplify the numbers, communicate clearly, and plan ahead for
-              taxes so you can focus on what matters.
+              Whether you&apos;re managing personal taxes, growing a business, or
+              navigating cryptocurrency and NFT activity, your accounting should
+              make life easier—not take over your time. We simplify the numbers,
+              communicate clearly, and plan ahead for taxes so you can focus on
+              what matters.
+            </p>
+            <p className="reveal reveal-delay-2 mt-4 max-w-xl text-sm leading-relaxed text-foreground/80">
+              We specialize in cryptocurrency and digital-asset tax support,
+              including sales, exchanges, swaps, staking or mining rewards,
+              airdrops, and other DeFi transactions.
             </p>
             <div className="reveal reveal-delay-3 mt-8 flex flex-col gap-3 sm:flex-row sm:flex-wrap">
               <Link
@@ -116,6 +128,7 @@ export default function HomePage() {
               {[
                 "Cost-conscious support with clear communication",
                 "Proactive tax-planning conversations before deadlines",
+                "Specialized cryptocurrency, NFT, and DeFi tax support",
                 "One relationship for tax, books, payroll, and business needs",
                 "More time to focus on running and growing your business",
               ].map((item) => (
@@ -191,9 +204,10 @@ export default function HomePage() {
             Services for individuals and businesses
           </h2>
           <p className="mt-3 text-muted-foreground">
-            From personal returns to recurring business support, we keep the
-            process organized and explain what matters—so you can make decisions
-            with confidence and keep your attention on your work.
+            From personal returns and digital-asset tax work to recurring
+            business support, we keep the process organized and explain what
+            matters—so you can make decisions with confidence and keep your
+            attention on your work.
           </p>
         </div>
         <div className="grid gap-4 sm:grid-cols-2 lg:grid-cols-4">
@@ -228,9 +242,10 @@ export default function HomePage() {
               Let Your Accounting Support Your Growth
             </h2>
             <p className="mt-4 text-muted-foreground leading-relaxed">
-              When your books, payroll, and tax planning are handled proactively,
-              you spend less time chasing paperwork and more time serving
-              customers, leading your team, and growing the business.
+              When your books, payroll, digital-asset records, and tax planning
+              are handled proactively, you spend less time chasing paperwork and
+              more time serving customers, leading your team, and growing the
+              business.
             </p>
             <ul className="mt-6 space-y-3 text-sm">
               {[
@@ -286,7 +301,7 @@ export default function HomePage() {
             long-term client relationships.
           </p>
         </div>
-        <div className="grid gap-6 md:grid-cols-3">
+        <div className="grid gap-6 md:grid-cols-2 lg:grid-cols-4">
           {reasons.map((reason) => (
             <div
               key={reason.title}
@@ -337,7 +352,7 @@ export default function HomePage() {
 
       <CtaBand
         title="Spend More Time Growing. We&apos;ll Handle the Accounting."
-        description="Tell us where the process feels difficult, and we&apos;ll help map out a simpler next step."
+        description="Tell us where the process feels difficult—including crypto, NFT, or DeFi tax records—and we&apos;ll help map out a simpler next step."
         primaryLabel="Request a Consultation"
         primaryHref="/contact"
         secondaryLabel="Client Portal"

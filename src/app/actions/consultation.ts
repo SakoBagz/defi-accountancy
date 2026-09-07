@@ -11,6 +11,7 @@ const consultationSchema = z.object({
   service: z.enum([
     "personal-taxes",
     "business-taxes",
+    "digital-asset-tax",
     "bookkeeping",
     "payroll",
     "sales-tax",

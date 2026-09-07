@@ -109,6 +109,14 @@ export function SiteHeader() {
                 >
                   All Services
                 </Link>
+                <Link
+                  href="/services#digital-asset-tax"
+                  role="menuitem"
+                  className="block rounded-md px-3 py-2 text-sm font-medium text-brand hover:bg-muted"
+                  onClick={() => setServicesOpen(false)}
+                >
+                  Crypto &amp; Digital Asset Tax
+                </Link>
                 {serviceGroups.map((group) => (
                   <Link
                     key={group.slug}
@@ -303,6 +311,13 @@ export function SiteHeader() {
             >
               All Services
             </Link>
+            <Link
+              href="/services#digital-asset-tax"
+              onClick={() => setMobileOpen(false)}
+              className="pressable rounded-md px-3 py-3 text-base font-medium text-brand"
+            >
+              Crypto &amp; Digital Asset Tax
+            </Link>
             {serviceGroups.map((group) => (
               <Link
                 key={group.slug}
@@ -367,4 +382,3 @@ export function SiteHeader() {
     </header>
   );
 }
-

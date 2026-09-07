@@ -5,7 +5,7 @@ import { siteConfig } from "@/lib/site";
 export const metadata: Metadata = {
   title: "FAQ",
   description:
-    "Answers about tax preparation, bookkeeping, payroll, business, notary services, and remote service from DeFi Accountancy in Los Angeles, CA.",
+    "Answers about tax preparation, cryptocurrency, NFTs, DeFi, bookkeeping, payroll, business, notary services, and remote service from DeFi Accountancy in Los Angeles, CA.",
 };
 
 const faqGroups = [
@@ -31,6 +31,27 @@ const faqGroups = [
       {
         q: "Do you offer tax planning?",
         a: "When appropriate, we discuss lawful tax-planning opportunities based on your facts, goals, and timing. Tax planning can help you make informed decisions before deadlines, but no particular tax result or savings is guaranteed.",
+      },
+    ],
+  },
+  {
+    title: "Cryptocurrency, NFTs & DeFi",
+    items: [
+      {
+        q: "Do you help with cryptocurrency and NFT taxes?",
+        a: "Yes. Cryptocurrency, NFTs, and other digital assets are a core specialty. We can help organize and report activity such as purchases, sales, exchanges, swaps, payments, staking or mining rewards, airdrops, and NFT sales or royalties, as applicable. Tax treatment depends on your facts and records, and no particular tax result is guaranteed.",
+      },
+      {
+        q: "Can you help with DeFi transactions?",
+        a: "Yes. We can review records for DeFi activity such as token swaps, liquidity or yield activity, lending, borrowing, and rewards, then discuss what is needed for tax reporting. The tax treatment depends on the details and the records available.",
+      },
+      {
+        q: "What records should I gather for crypto or NFT tax work?",
+        a: "Gather exchange statements, wallet exports, transaction histories, dates, units, U.S. dollar values, fees, cost-basis information, and records for NFT purchases, sales, royalties, or transfers. We can discuss what is available and what may be missing.",
+      },
+      {
+        q: "Do you help if I sold or exchanged cryptocurrency or NFTs?",
+        a: "Yes. Sales and exchanges—including trading one digital asset for another, selling for dollars, or using digital assets to pay for goods or services—can require reporting. We can help organize the activity and prepare the applicable tax reporting based on your facts and records.",
       },
     ],
   },
@@ -117,7 +138,7 @@ export default function FaqPage() {
     <>
       <PageHero
         title="Frequently Asked Questions"
-        description="Straightforward answers about taxes, bookkeeping, payroll, business services, notary appointments, and how to get started with a Los Angeles, CA firm serving clients nationwide through remote accounting service."
+        description="Straightforward answers about taxes, cryptocurrency, NFTs, DeFi, bookkeeping, payroll, business services, notary appointments, and how to get started with a Los Angeles, CA firm serving clients nationwide through remote accounting service."
       />
       <SectionShell>
         <div className="mx-auto max-w-3xl space-y-10">

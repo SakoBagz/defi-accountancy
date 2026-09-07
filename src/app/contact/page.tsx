@@ -8,7 +8,7 @@ import { siteConfig } from "@/lib/site";
 export const metadata: Metadata = {
   title: "Contact",
   description:
-    "Contact DeFi Accountancy in Los Angeles, CA for tax, bookkeeping, payroll, business, and in-person notary services.",
+    "Contact DeFi Accountancy in Los Angeles, CA for cryptocurrency, NFT, DeFi, tax, bookkeeping, payroll, business, and in-person notary services.",
 };
 
 export default function ContactPage() {
@@ -16,7 +16,7 @@ export default function ContactPage() {
     <>
       <PageHero
         title="Contact DeFi Accountancy"
-        description="Tell us what feels difficult, time-consuming, or unclear. We&apos;ll learn about your goals and help map out a simpler next step."
+        description="Tell us what feels difficult, time-consuming, or unclear—including cryptocurrency, NFT, or DeFi tax records. We&apos;ll learn about your goals and help map out a simpler next step."
       />
       <SectionShell>
         <div className="grid gap-10 lg:grid-cols-[0.85fr_1.15fr]">

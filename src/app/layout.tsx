@@ -46,8 +46,17 @@ const jsonLd = {
   telephone: siteConfig.phoneE164,
   email: siteConfig.email,
   image: `${siteConfig.url}/logo.png`,
-  serviceType: services.map((service) => service.name),
-  knowsAbout: industries.map((industry) => industry.name),
+  serviceType: [
+    ...services.map((service) => service.name),
+    "Cryptocurrency and digital asset tax support",
+  ],
+  knowsAbout: [
+    ...industries.map((industry) => industry.name),
+    "Cryptocurrency tax",
+    "NFT tax",
+    "DeFi tax",
+    "Digital asset tax reporting",
+  ],
   areaServed: [
     {
       "@type": "City",

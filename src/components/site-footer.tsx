@@ -38,7 +38,8 @@ export function SiteFooter() {
           <p className="max-w-xs text-sm leading-relaxed text-primary-foreground/75">
             Cost-conscious, caring tax and accounting support that simplifies the
             work behind your finances and gives you more time to focus on what
-            matters.
+            matters, including specialized cryptocurrency, NFT, and DeFi tax
+            support.
           </p>
           <CtecCredential
             variant="dark"

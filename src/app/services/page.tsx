@@ -3,11 +3,12 @@ import Link from "next/link";
 import { ArrowRight } from "lucide-react";
 import { CtaBand, PageHero, SectionShell } from "@/components/page-sections";
 import { getService, serviceGroups } from "@/lib/services";
+import { siteConfig } from "@/lib/site";
 
 export const metadata: Metadata = {
   title: "Services",
   description:
-    "Explore clear, cost-conscious tax, bookkeeping, payroll, business, and in-person notary services from DeFi Accountancy in Los Angeles, CA, with remote accounting support available nationwide.",
+    "Explore clear, cost-conscious tax, cryptocurrency, NFT, DeFi, bookkeeping, payroll, business, and in-person notary services from DeFi Accountancy in Los Angeles, CA, with remote accounting support available nationwide.",
 };
 
 export default function ServicesPage() {
@@ -17,7 +18,7 @@ export default function ServicesPage() {
     <>
       <PageHero
         title="Our Services"
-        description="We organize our accounting and business services into four practical areas, with Notary Services available as a separate in-person offering. Choose an area below, or contact us and we&apos;ll help map out the right next step."
+        description="We organize our accounting and business services into four practical areas, with specialized cryptocurrency, NFT, and DeFi tax support included in our tax work. Notary Services are available as a separate in-person offering. Choose an area below, or contact us and we&apos;ll help map out the right next step."
       />
       <SectionShell>
         <div className="grid gap-4 md:grid-cols-2">
@@ -65,6 +66,31 @@ export default function ServicesPage() {
             </article>
           ))}
         </div>
+        <article
+          id="digital-asset-tax"
+          className="mt-6 flex scroll-mt-24 flex-col gap-6 rounded-xl border border-brand/25 bg-brand/5 p-6 sm:flex-row sm:items-center sm:justify-between"
+        >
+          <div>
+            <p className="text-sm font-semibold uppercase tracking-[0.14em] text-brand">
+              {siteConfig.digitalAssetFocus}
+            </p>
+            <h2 className="mt-2 font-heading text-2xl font-semibold">
+              Tax support for crypto, NFTs, and DeFi activity
+            </h2>
+            <p className="mt-3 max-w-2xl text-sm leading-relaxed text-muted-foreground">
+              {siteConfig.digitalAssetSummary} We can help organize records for
+              tax reporting and planning; treatment depends on your facts and
+              available records, and no particular tax result is guaranteed.
+            </p>
+          </div>
+          <Link
+            href="/contact?service=digital-asset-tax"
+            className="inline-flex shrink-0 items-center gap-1 text-sm font-medium text-brand underline-offset-4 hover:underline"
+          >
+            Discuss digital-asset taxes
+            <ArrowRight className="size-4" />
+          </Link>
+        </article>
         <article
           id="notary-services"
           className="mt-6 flex scroll-mt-24 flex-col gap-6 rounded-xl border border-brand/25 bg-brand/5 p-6 sm:flex-row sm:items-center sm:justify-between"

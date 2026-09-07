@@ -28,14 +28,16 @@ export const services: Service[] = [
     shortName: "Personal Tax",
     href: "/services/personal-tax",
     summary:
-      "Professional assistance preparing individual federal and state tax returns.",
+      "Professional assistance preparing individual federal and state tax returns, including cryptocurrency, NFT, and other digital-asset activity.",
     description:
-      "Whether your income is straightforward or more complex, DeFi Accountancy helps individuals prepare accurate federal and state tax returns with clear guidance along the way.",
+      "Whether your income is straightforward or includes cryptocurrency, NFTs, or DeFi activity, DeFi Accountancy helps individuals prepare accurate federal and state tax returns with clear guidance along the way. We can help organize records for purchases, sales, exchanges, swaps, staking or mining rewards, airdrops, and other digital-asset activity as applicable.",
     audience:
-      "Individuals with W-2, 1099, self-employment, investment, rental, or other personal tax situations.",
+      "Individuals with W-2, 1099, self-employment, investment, rental, cryptocurrency, NFT, DeFi, or other personal tax situations.",
     problems: [
       "Unsure which documents you need",
       "Multiple income sources to report",
+      "Crypto, NFT, or DeFi transactions across wallets and exchanges",
+      "Missing or inconsistent digital-asset basis and transaction records",
       "Prior-year or amended returns",
       "Wanting clear explanations—not jargon",
     ],
@@ -45,6 +47,10 @@ export const services: Service[] = [
       "W-2 and 1099 income",
       "Self-employment income",
       "Investment and rental income",
+      "Cryptocurrency and digital-asset transaction reporting",
+      "NFT sales and related activity",
+      "DeFi, staking, mining, reward, and airdrop records",
+      "Sales, exchanges, swaps, and other digital-asset dispositions",
       "Prior-year returns",
       "Amended returns",
       "Estimated taxes",
@@ -58,15 +64,16 @@ export const services: Service[] = [
     shortName: "Business Tax",
     href: "/services/business-tax",
     summary:
-      "Tax preparation and support for businesses and business owners.",
+      "Tax preparation and support for businesses and business owners, including digital-asset activity.",
     description:
-      "From sole proprietors to corporations, we help business owners meet filing requirements and prepare for tax season with organized, professional support.",
+      "From sole proprietors to corporations, we help business owners meet filing requirements and prepare for tax season with organized, professional support—including businesses that accept cryptocurrency, create or sell NFTs, or have other digital-asset activity.",
     audience:
-      "Sole proprietors, LLCs, partnerships, S corporations, and C corporations.",
+      "Sole proprietors, LLCs, partnerships, S corporations, and C corporations, including businesses with cryptocurrency, NFT, or DeFi activity.",
     problems: [
       "Business returns that feel overwhelming",
       "Year-end prep starting too late",
       "Uncertainty about deductions and estimates",
+      "Digital-asset payments, sales, or exchanges are hard to track",
       "Need for entity-related tax support",
     ],
     offerings: [
@@ -75,6 +82,9 @@ export const services: Service[] = [
       "Estimated tax assistance",
       "Business deductions guidance",
       "Year-end preparation",
+      "Digital-asset income and transaction reporting",
+      "Cryptocurrency payments, NFT sales, and related business activity",
+      "DeFi transaction records and tax-planning discussions",
       "Tax planning",
       "Entity-related tax support",
     ],
@@ -287,7 +297,7 @@ export const serviceGroups: ServiceGroup[] = [
     slug: "tax-planning-preparation",
     name: "Tax Planning & Preparation",
     summary:
-      "Personal and business tax returns with planning conversations to help you make informed decisions before deadlines.",
+      "Personal and business tax returns—including digital-asset activity—with planning conversations to help you make informed decisions before deadlines.",
     serviceSlugs: ["personal-tax", "business-tax"],
   },
   {

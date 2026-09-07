@@ -55,7 +55,7 @@
 }
 
 :root {
-  /* Navy + off-white + muted teal — professional, not crypto */
+  /* Navy + off-white + muted teal — professional with subtle digital-asset cues */
   --background: oklch(0.985 0.004 95);
   --foreground: oklch(0.22 0.025 250);
   --card: oklch(0.995 0.002 95);
