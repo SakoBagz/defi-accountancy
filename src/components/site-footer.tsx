@@ -170,21 +170,6 @@ export function SiteFooter() {
                 />
               </a>
               <a
-                href={intuitCryptocurrencyTaxBadgeUrl}
-                target="_blank"
-                rel="noopener noreferrer"
-                aria-label="Verify Intuit Academy Cryptocurrency Tax Specialty badge on Credly"
-                className="pressable rounded-lg focus-visible:outline-2 focus-visible:outline-offset-2 focus-visible:outline-ring"
-              >
-                <Image
-                  src="/brand/intuit/intuit-academy-cryptocurrency-tax-exam.png"
-                  alt="Intuit Academy Cryptocurrency Tax Specialty"
-                  width={605}
-                  height={605}
-                  className="size-20 object-contain 2xl:size-24"
-                />
-              </a>
-              <a
                 href={intuitBusinessTaxBadgeUrl}
                 target="_blank"
                 rel="noopener noreferrer"
@@ -194,6 +179,21 @@ export function SiteFooter() {
                 <Image
                   src="/brand/intuit/intuit-academy-business-tax-exam.png"
                   alt="Intuit Academy Business Tax Specialty"
+                  width={605}
+                  height={605}
+                  className="size-20 object-contain 2xl:size-24"
+                />
+              </a>
+              <a
+                href={intuitCryptocurrencyTaxBadgeUrl}
+                target="_blank"
+                rel="noopener noreferrer"
+                aria-label="Verify Intuit Academy Cryptocurrency Tax Specialty badge on Credly"
+                className="pressable rounded-lg focus-visible:outline-2 focus-visible:outline-offset-2 focus-visible:outline-ring"
+              >
+                <Image
+                  src="/brand/intuit/intuit-academy-cryptocurrency-tax-exam.png"
+                  alt="Intuit Academy Cryptocurrency Tax Specialty"
                   width={605}
                   height={605}
                   className="size-20 object-contain 2xl:size-24"
