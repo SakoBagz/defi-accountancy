@@ -7,6 +7,8 @@ import { siteConfig } from "@/lib/site";
 
 const intuitBookkeepingBadgeUrl =
   "https://www.credly.com/badges/545ff80e-7e23-49b9-bb05-70e2476a4b40/public_url";
+const intuitClientAdvisoryBadgeUrl =
+  "https://www.credly.com/badges/87c613a7-1ae7-42cc-927d-bac0899d79fd/public_url";
 const intuitCryptocurrencyTaxBadgeUrl =
   "https://www.credly.com/badges/bb008b29-75ab-4609-bbda-f3467a3087f6/public_url";
 const intuitBusinessTaxBadgeUrl =
@@ -154,6 +156,21 @@ export function SiteFooter() {
               Additional credentials
             </p>
             <div className="mt-3 grid grid-cols-2 gap-2">
+              <a
+                href={intuitClientAdvisoryBadgeUrl}
+                target="_blank"
+                rel="noopener noreferrer"
+                aria-label="Verify Intuit ProAdvisor Client Advisory Services Foundations badge on Credly"
+                className="pressable rounded-lg focus-visible:outline-2 focus-visible:outline-offset-2 focus-visible:outline-ring"
+              >
+                <Image
+                  src="/brand/intuit/client-advisory-services-foundations.png"
+                  alt="Intuit ProAdvisor Client Advisory Services Foundations Graduate"
+                  width={600}
+                  height={600}
+                  className="size-20 object-contain 2xl:size-24"
+                />
+              </a>
               <a
                 href={intuitBookkeepingBadgeUrl}
                 target="_blank"
