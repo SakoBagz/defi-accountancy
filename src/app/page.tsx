@@ -76,7 +76,7 @@ export default function HomePage() {
           aria-hidden
           className="pointer-events-none absolute inset-0 bg-[radial-gradient(ellipse_at_top_right,oklch(0.92_0.03_185)_0%,transparent_55%),linear-gradient(180deg,var(--surface),var(--background))]"
         />
-        <div className="relative mx-auto grid max-w-6xl gap-10 px-4 py-16 sm:px-6 sm:py-24 lg:grid-cols-[1.15fr_0.85fr] lg:items-center lg:px-8 lg:py-28">
+        <div className="relative mx-auto grid max-w-6xl gap-10 px-4 pb-14 pt-8 sm:px-6 sm:pb-20 sm:pt-10 lg:grid-cols-[1.15fr_0.85fr] lg:items-center lg:px-8 lg:pb-24 lg:pt-10">
           <div>
             <p className="reveal text-sm font-semibold uppercase tracking-[0.16em] text-brand">
               {siteConfig.descriptor}
