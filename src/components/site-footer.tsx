@@ -153,7 +153,7 @@ export function SiteFooter() {
             <p className="text-xs font-semibold uppercase tracking-[0.14em] text-primary-foreground/60">
               Additional credentials
             </p>
-            <div className="mt-3 flex flex-wrap gap-3">
+            <div className="mt-3 grid grid-cols-2 gap-2">
               <a
                 href={intuitBookkeepingBadgeUrl}
                 target="_blank"
@@ -166,7 +166,7 @@ export function SiteFooter() {
                   alt="Intuit Bookkeeping Trained"
                   width={600}
                   height={600}
-                  className="size-24 object-contain"
+                  className="size-20 object-contain 2xl:size-24"
                 />
               </a>
               <a
@@ -181,7 +181,7 @@ export function SiteFooter() {
                   alt="Intuit Academy Cryptocurrency Tax Specialty"
                   width={605}
                   height={605}
-                  className="size-24 object-contain"
+                  className="size-20 object-contain 2xl:size-24"
                 />
               </a>
               <a
@@ -196,7 +196,7 @@ export function SiteFooter() {
                   alt="Intuit Academy Business Tax Specialty"
                   width={605}
                   height={605}
-                  className="size-24 object-contain"
+                  className="size-20 object-contain 2xl:size-24"
                 />
               </a>
             </div>
