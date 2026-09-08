@@ -9,6 +9,8 @@ const intuitBookkeepingBadgeUrl =
   "https://www.credly.com/badges/545ff80e-7e23-49b9-bb05-70e2476a4b40/public_url";
 const intuitCryptocurrencyTaxBadgeUrl =
   "https://www.credly.com/badges/bb008b29-75ab-4609-bbda-f3467a3087f6/public_url";
+const intuitBusinessTaxBadgeUrl =
+  "https://www.credly.com/badges/272d858f-0fd2-4c88-8c1e-eac934ae330c/public_url";
 
 export function SiteFooter() {
   return (
@@ -151,7 +153,7 @@ export function SiteFooter() {
             <p className="text-xs font-semibold uppercase tracking-[0.14em] text-primary-foreground/60">
               Additional credentials
             </p>
-            <div className="mt-3 flex flex-wrap gap-3">
+            <div className="mt-3 grid grid-cols-2 gap-2">
               <a
                 href={intuitBookkeepingBadgeUrl}
                 target="_blank"
@@ -164,7 +166,22 @@ export function SiteFooter() {
                   alt="Intuit Bookkeeping Trained"
                   width={600}
                   height={600}
-                  className="size-24 object-contain"
+                  className="size-20 object-contain 2xl:size-24"
+                />
+              </a>
+              <a
+                href={intuitBusinessTaxBadgeUrl}
+                target="_blank"
+                rel="noopener noreferrer"
+                aria-label="Verify Intuit Academy Business Tax Specialty badge on Credly"
+                className="pressable rounded-lg focus-visible:outline-2 focus-visible:outline-offset-2 focus-visible:outline-ring"
+              >
+                <Image
+                  src="/brand/intuit/intuit-academy-business-tax-exam.png"
+                  alt="Intuit Academy Business Tax Specialty"
+                  width={605}
+                  height={605}
+                  className="size-20 object-contain 2xl:size-24"
                 />
               </a>
               <a
@@ -179,7 +196,7 @@ export function SiteFooter() {
                   alt="Intuit Academy Cryptocurrency Tax Specialty"
                   width={605}
                   height={605}
-                  className="size-24 object-contain"
+                  className="size-20 object-contain 2xl:size-24"
                 />
               </a>
             </div>
